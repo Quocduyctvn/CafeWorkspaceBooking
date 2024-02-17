@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] </title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/CafeWorkspaceBooking.styles.css" asp-append-version="true" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Damion">
+	<link href="~/css/bootstrap.min.css" rel="stylesheet">
+	<link href="~/css/templatemo-style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="~/img/favicon.ico" type="image/x-icon" />
+
+
+	@* thư viện chọn ngày  *@
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+
+	<div class="tm-top-header">
+		<div class="container">
+			<div class="row">
+				<div class="tm-top-header-inner">
+					<div class="tm-logo-container">
+						<img src="~/img/logo.png" alt="Logo" class="tm-site-logo">
+						<span class="tm-site-name tm-handwriting-font">Lolita Coffe</span>
+					</div>
+					<div class="mobile-menu-icon">
+						<i class="fa fa-bars"></i>
+					</div>
+					<nav class="tm-nav d-lg-block">
+						<ul>
+							<li><a asp-action="Index" asp-controller="Home" class="active">Trang Chủ</a></li>
+							<li >
+								<div class="dropdown">
+									<a onclick="myFunction('drop1', event)" id="drop1" class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Dịch Vụ <span class="bi bi-caret-down-fill" ></span>
+								</a>
+								<div class="dropdown-menu custom-background " style="z-index: 1000;">
+										<div>
+											<a class="dropdown-item text-dark px-5 py-2 fs-5" href="#datphong">Đặt Phòng</a>
+										</div>
+										<div>
+											<a class="dropdown-item text-dark px-5 py-2 fs-5" asp-action="DetailOfBooking" asp-controller="DatPhong">Chi tiết Đặt Phòng</a>
+										</div>
+										<div>
+											<a class="dropdown-item text-dark px-5 py-2 fs-5" href="#">Đặt Bàn</a>
+										</div>
+										<div>
+											<a class="dropdown-item text-dark px-5 py-2  fs-5" href="#">Order Nước</a>
+										</div>
+								</div>
+								</div>
+							</li>
+
+							<li><a href="contact.html">Liên hệ</a></li>
+							<li class="nav-item dropdown">
+								<a onclick="myFunction('drop2', event)" id="drop2" class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Tài Khoản <span class="bi bi-caret-down-fill"></span>
+								</a>
+								<div class="dropdown-menu custom-background" style=" z-index: 1000;">
+									<div><a class="dropdown-item text-dark px-5 py-2 fs-5" asp-action="Register" asp-controller="Account">Đăng Ký</a></div>
+									<div><a class="dropdown-item text-dark px-5 py-2 fs-5" asp-action="Login" asp-controller="Account">Đăng Nhập</a></div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	@* thông báo success or failed  *@
+	<partial name="_Notify" />
+	@* check nếu là trang Home Index thì hiện layout Welcome *@
+	@if (@ViewBag.Path == "HomeIndex")  
+	{
+		<section class="tm-welcome-section">
+			<div class="container tm-position-relative">
+				<div class="tm-lights-container">
+					<img src="~/img/light.png" alt="Light" class="light light-1">
+					<img src="~/img/light.png" alt="Light" class="light light-2">
+					<img src="~/img/light.png" alt="Light" class="light light-3">
+				</div>
+				<div class="row tm-welcome-content">
+					<h2 class="white-text tm-handwriting-font tm-welcome-header"><img src="~/img/header-line.png" alt="" class="tm-header-line">&nbsp;Welcome To&nbsp;&nbsp;<img src="~/img/header-line.png" alt="" class="tm-header-line"></h2>
+					<h4 class="gold-text tm-welcome-header-2">Lolita Coffe</h4>
+				</div>
+				<img src="~/img/table-set.png" alt="Table Set" class="tm-table-set img-responsive">
+			</div>
+		</section>
+	}
+
+
+	<div class="m-5"> 
+
+		<main role="main" class="pb-3 m-5  pt-5">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer>
+		<div class="tm-black-bg">
+			<div class="container">
+				<div class="row margin-bottom-60">
+					<nav class="col-lg-3 col-md-3 tm-footer-nav tm-footer-div">
+						<h3 class="tm-footer-div-title">Main Menu</h3>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Directory</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Our Services</a></li>
+						</ul>
+					</nav>
+					<div class="col-lg-5 col-md-5 tm-footer-div">
+						<h3 class="tm-footer-div-title">About Us</h3>
+						<p class="margin-top-15">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+						<p class="margin-top-15">Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
+					</div>
+					<div class="col-lg-4 col-md-4 tm-footer-div">
+						<h3 class="tm-footer-div-title">Get Social</h3>
+						<p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante.</p>
+						<div class="tm-social-icons-container">
+							<a href="#" class="tm-social-icon"><i class="fa fa-facebook"></i></a>
+							<a href="#" class="tm-social-icon"><i class="fa fa-twitter"></i></a>
+							<a href="#" class="tm-social-icon"><i class="fa fa-linkedin"></i></a>
+							<a href="#" class="tm-social-icon"><i class="fa fa-youtube"></i></a>
+							<a href="#" class="tm-social-icon"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<script src="~/lib/awesome-notifications/index.var.min.js"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script type="text/javascript" src="~/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+	<script type="text/javascript" src="~/js/templatemo-script.js"></script>      <!-- Templatemo Script -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/popper.min.js"></script>
+	<script src="~/js/bootstrap.min.js"></script>
+	<!-- ALL PLUGINS -->
+@* 	<script src="js/jquery.superslides.min.js"></script>
+	<script src="js/bootstrap-select.js"></script>
+	<script src="js/inewsticker.js"></script>
+	<script src="js/bootsnav.js."></script>
+	<script src="js/images-loded.min.js"></script>
+	<script src="js/isotope.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/baguetteBox.min.js"></script>
+	<script src="js/form-validator.min.js"></script>
+	<script src="js/contact-form-script.js"></script>
+	<script src="js/custom.js"></script> *@
+	<script>
+		function myFunction(x, event) {
+			event.stopPropagation();
+			var element = document.getElementById(x);
+			element.classList.toggle("show");
+		}
+		document.addEventListener('click', function (event) {
+			var drop1 = document.getElementById('drop1');
+			if (drop1 && !drop1.contains(event.target)) {
+				drop1.nextElementSibling.classList.remove("show");
+			}
+			var drop2 = document.getElementById('drop2');
+			if (drop2 && !drop2.contains(event.target)) {
+				drop2.nextElementSibling.classList.remove("show");
+			}
+		});
+	</script>
+
+	@* slide in detail  *@
+	<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			let i;
+			let slides = document.getElementsByClassName("mySlides");
+			let dots = document.getElementsByClassName("demo");
+			let captionText = document.getElementById("caption");
+			if (n > slides.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = slides.length }
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+	</script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

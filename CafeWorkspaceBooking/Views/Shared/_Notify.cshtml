@@ -1,0 +1,32 @@
+﻿@using System.Security.Claims
+
+@{
+	string returnUrl = Context.Request.Query["ReturnUrl"];
+	var user = Context.Request.HttpContext.User;
+	var roleClaim = user.FindFirst(ClaimTypes.Role);
+}
+
+@if (TempData["_SuccessMesg"] != null)
+{
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		@TempData["_SuccessMesg"]
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+
+@if (TempData["_ErrorMesg"] != null)
+{
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		@TempData["_ErrorMesg"]
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+
+@if (returnUrl != null)
+{
+	<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		Bạn không có quyền truy cập vào trang @returnUrl.TrimStart('/')
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+}
+

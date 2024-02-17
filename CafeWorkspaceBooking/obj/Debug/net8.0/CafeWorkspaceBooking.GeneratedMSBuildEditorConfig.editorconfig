@@ -1,0 +1,119 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CafeWorkspaceBooking
+build_property.RootNamespace = CafeWorkspaceBooking
+build_property.ProjectDir = D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminDatPhong/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5EYXRQaG9uZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminHome/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Ib21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminPhong/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QaG9uZ1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminPhong/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QaG9uZ1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminPhong/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QaG9uZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/Shared/_Notify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Ob3RpZnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/DatPhong/BookingRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0UGhvbmdcQm9va2luZ1Jvb20uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/DatPhong/DetailOfBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0UGhvbmdcRGV0YWlsT2ZCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Home/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Shared/_Notify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-evkdxvsx6l
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ksqp4n0q5e

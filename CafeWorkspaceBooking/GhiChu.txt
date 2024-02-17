@@ -1,0 +1,3 @@
+Sửa Lỗi: 	Introducing FOREIGN KEY constraint 'FK_AppDanhGias_AppKhachHangs_appKhachHangIdKhachHang' on table 'AppDanhGias' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.
+		Could not create constraint or index. See previous errors.
+	=> thêm '?' ở thuộc tính khóa ngoại của bảng con  

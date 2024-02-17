@@ -1,0 +1,58 @@
+﻿@model CafeWorkspaceBooking.Areas.Admin.ViewModels.PhongVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AppPhong</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" method="Post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TenPhong" class="control-label"></label>
+                <input asp-for="TenPhong" class="form-control" />
+                <span asp-validation-for="TenPhong" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SucChua" class="control-label"></label>
+                <input asp-for="SucChua" class="form-control" />
+                <span asp-validation-for="SucChua" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gia" class="control-label"></label>
+                <input asp-for="Gia" class="form-control" />
+                <span asp-validation-for="Gia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Img" class="control-label"></label>
+                <input asp-for="Img" type="file" accept="image/*" class="form-control" />
+                <span asp-validation-for="Img" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="appImgPhongs" class="control-label"></label>
+                <input asp-for="appImgPhongs" type="file" accept="image/*" class="form-control" multiple />
+                <span asp-validation-for="appImgPhongs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoTa" class="control-label"></label>
+                <textarea asp-for="MoTa" class="form-control"></textarea>
+                <span asp-validation-for="MoTa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Thêm Phòng" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

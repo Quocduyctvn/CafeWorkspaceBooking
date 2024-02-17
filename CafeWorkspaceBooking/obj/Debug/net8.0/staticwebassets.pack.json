@@ -1,0 +1,749 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CafeWorkspaceBooking.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CafeWorkspaceBooking.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Image\\StaticImg\\BangHieu.jpg",
+      "PackagePath": "staticwebassets\\Image\\StaticImg\\BangHieu.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\2033457638416239578530303.jpg",
+      "PackagePath": "staticwebassets\\Phong\\2033457638416239578530303.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\2033457638416239579018669.jpg",
+      "PackagePath": "staticwebassets\\Phong\\2033457638416239579018669.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\2033457638416244488120578.jpg",
+      "PackagePath": "staticwebassets\\Phong\\2033457638416244488120578.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\2033457638417031778091064.jpg",
+      "PackagePath": "staticwebassets\\Phong\\2033457638417031778091064.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\2033457638420558028411479.jpg",
+      "PackagePath": "staticwebassets\\Phong\\2033457638420558028411479.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\2033457638420728361355610.jpg",
+      "PackagePath": "staticwebassets\\Phong\\2033457638420728361355610.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\2033457638420728595002809.jpg",
+      "PackagePath": "staticwebassets\\Phong\\2033457638420728595002809.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\2033457638421910241164620.jpg",
+      "PackagePath": "staticwebassets\\Phong\\2033457638421910241164620.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638416239579029584.jpg",
+      "PackagePath": "staticwebassets\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638416239579029584.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638416244488136435.jpg",
+      "PackagePath": "staticwebassets\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638416244488136435.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638416246039145775.jpg",
+      "PackagePath": "staticwebassets\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638416246039145775.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638416763952378208.jpg",
+      "PackagePath": "staticwebassets\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638416763952378208.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638420557346649172.jpg",
+      "PackagePath": "staticwebassets\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638420557346649172.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638420728361383944.jpg",
+      "PackagePath": "staticwebassets\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638420728361383944.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638420728595007081.jpg",
+      "PackagePath": "staticwebassets\\Phong\\anh-nen-den-3d-cuc-dep-cho-dien-thoai_095028204638420728595007081.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-anh-mua-sao-bang-5638416239579036506.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-anh-mua-sao-bang-5638416239579036506.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-anh-mua-sao-bang-5638416243511627851.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-anh-mua-sao-bang-5638416243511627851.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-anh-mua-sao-bang-5638416244488143891.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-anh-mua-sao-bang-5638416244488143891.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-anh-mua-sao-bang-5638416763952405022.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-anh-mua-sao-bang-5638416763952405022.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-anh-mua-sao-bang-5638417031778131246.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-anh-mua-sao-bang-5638417031778131246.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-anh-mua-sao-bang-5638420557346660504.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-anh-mua-sao-bang-5638420557346660504.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-anh-mua-sao-bang-5638420728361393381.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-anh-mua-sao-bang-5638420728361393381.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-anh-mua-sao-bang-5638420728595010843.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-anh-mua-sao-bang-5638420728595010843.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416239579109129.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416239579109129.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416243511643721.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416243511643721.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416244488159652.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416244488159652.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416246112017401.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416246112017401.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416763952423895.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638416763952423895.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638417031778146488.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638417031778146488.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638420557346670672.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638420557346670672.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638420558028416950.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638420558028416950.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638420728361405955.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638420728361405955.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638420728595021693.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638420728595021693.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638421910241214801.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638421910241214801.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638421910485844047.jpg",
+      "PackagePath": "staticwebassets\\Phong\\hinh-nen-ban-do-the-gioi-nen-den638421910485844047.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\nen01.jpg",
+      "PackagePath": "staticwebassets\\Phong\\nen01.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638416235354389734.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638416235354389734.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638416239579123707.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638416239579123707.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638416243511657863.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638416243511657863.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638416244488174140.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638416244488174140.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638416246112045305.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638416246112045305.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638416763952455856.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638416763952455856.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638417031778164478.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638417031778164478.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638420557346683195.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638420557346683195.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638420558028479394.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638420558028479394.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638420728361560146.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638420728361560146.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638420728595034211.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638420728595034211.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638421910241241656.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638421910241241656.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\sao bang638421910485873034.jpg",
+      "PackagePath": "staticwebassets\\Phong\\sao bang638421910485873034.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638416239579133691.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638416239579133691.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638416244488184443.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638416244488184443.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638416246112058768.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638416246112058768.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638416763952476293.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638416763952476293.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638417031778182735.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638417031778182735.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638420557346610815.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638420557346610815.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638420557346734272.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638420557346734272.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638420558028488681.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638420558028488681.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638420728361573513.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638420728361573513.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638420728594996508.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638420728594996508.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638421910241252632.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638421910241252632.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638421910485832318.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638421910485832318.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\Phong\\tải xuống638421910485934153.jpg",
+      "PackagePath": "staticwebassets\\Phong\\tải xuống638421910485934153.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\css\\Admin.css",
+      "PackagePath": "staticwebassets\\css\\Admin.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\css\\templatemo-style.css",
+      "PackagePath": "staticwebassets\\css\\templatemo-style.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\1.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicon.ico"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\header-line.png",
+      "PackagePath": "staticwebassets\\img\\header-line.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\light.png",
+      "PackagePath": "staticwebassets\\img\\light.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\menu-1.jpg",
+      "PackagePath": "staticwebassets\\img\\menu-1.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\menu-2.jpg",
+      "PackagePath": "staticwebassets\\img\\menu-2.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\menu-3.jpg",
+      "PackagePath": "staticwebassets\\img\\menu-3.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\menu-4.jpg",
+      "PackagePath": "staticwebassets\\img\\menu-4.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\menu-5.jpg",
+      "PackagePath": "staticwebassets\\img\\menu-5.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\menu-board.png",
+      "PackagePath": "staticwebassets\\img\\menu-board.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\nav-underline.png",
+      "PackagePath": "staticwebassets\\img\\nav-underline.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\popular-1.jpg",
+      "PackagePath": "staticwebassets\\img\\popular-1.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\popular-2.jpg",
+      "PackagePath": "staticwebassets\\img\\popular-2.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\popular-3.jpg",
+      "PackagePath": "staticwebassets\\img\\popular-3.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\popular-item-bg-hover.png",
+      "PackagePath": "staticwebassets\\img\\popular-item-bg-hover.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\popular-item-bg.png",
+      "PackagePath": "staticwebassets\\img\\popular-item-bg.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\shadow.png",
+      "PackagePath": "staticwebassets\\img\\shadow.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\special-1.jpg",
+      "PackagePath": "staticwebassets\\img\\special-1.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\special-2.jpg",
+      "PackagePath": "staticwebassets\\img\\special-2.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\special-3.jpg",
+      "PackagePath": "staticwebassets\\img\\special-3.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\special-4.jpg",
+      "PackagePath": "staticwebassets\\img\\special-4.jpg"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\table-set.png",
+      "PackagePath": "staticwebassets\\img\\table-set.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\tm-brown-button.png",
+      "PackagePath": "staticwebassets\\img\\tm-brown-button.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\img\\vertical-menu-bg.png",
+      "PackagePath": "staticwebassets\\img\\vertical-menu-bg.png"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\baguetteBox.min.js",
+      "PackagePath": "staticwebassets\\js\\baguetteBox.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\bootsnav.js",
+      "PackagePath": "staticwebassets\\js\\bootsnav.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\bootstrap-select.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-select.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\form-validator.min.js",
+      "PackagePath": "staticwebassets\\js\\form-validator.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\images-loded.min.js",
+      "PackagePath": "staticwebassets\\js\\images-loded.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\isotope.min.js",
+      "PackagePath": "staticwebassets\\js\\isotope.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\jquery-1.11.2.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.11.2.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\jquery.nicescroll.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.nicescroll.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\jquery.superslides.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.superslides.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\js\\templatemo-script.js",
+      "PackagePath": "staticwebassets\\js\\templatemo-script.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\index.js",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\index.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\index.min.js",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\index.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\index.var.js",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\index.var.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\index.var.min.js",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\index.var.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\modern.js",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\modern.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\modern.min.js",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\modern.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\modern.var.js",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\modern.var.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\modern.var.min.js",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\modern.var.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\style.css",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\style.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\awesome-notifications\\style.min.css",
+      "PackagePath": "staticwebassets\\lib\\awesome-notifications\\style.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\LAPTRINH\\DotNet\\dotNet_aTin\\HonSon\\CafeWorkspaceBooking\\CafeWorkspaceBooking\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CafeWorkspaceBooking.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CafeWorkspaceBooking.props",
+      "PackagePath": "build\\CafeWorkspaceBooking.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CafeWorkspaceBooking.props",
+      "PackagePath": "buildMultiTargeting\\CafeWorkspaceBooking.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CafeWorkspaceBooking.props",
+      "PackagePath": "buildTransitive\\CafeWorkspaceBooking.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
