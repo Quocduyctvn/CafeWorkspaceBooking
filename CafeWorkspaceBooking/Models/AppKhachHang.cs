@@ -42,6 +42,7 @@ namespace CafeWorkspaceBooking.Models
         // [Required]
         public ICollection<AppDanhGia>? appDanhGias { get; set; } // 1 khách hàng có nhìu đánh giá
 
-
+		public ICollection<AppThongBao> appThongBao { get; set; }
+        public ICollection<AppDatDV> appDatDVs { get; set; } // 1 khách hàng có nhìu đánh giá
     }
 }

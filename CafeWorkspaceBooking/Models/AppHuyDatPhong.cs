@@ -13,5 +13,7 @@ namespace CafeWorkspaceBooking.Models
 		public AppKhachHang appKhachHang { get; set; }
 		public int IdDatPhong { get; set; }   // lấy thông dặt hàng 
         public AppDatPhong appDatPhong { get; set; }
+
+        public AppThongBao?  appThongBao { get; set; }
     }
 }

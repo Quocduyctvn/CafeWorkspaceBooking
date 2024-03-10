@@ -1,0 +1,233 @@
+﻿@model CafeWorkspaceBooking.Models.AppDatPhong;
+@{
+	double tongDV = 0;
+	if (Model != null && Model.appDatDV != null && Model.appDatDV.Count > 0)
+	{
+		foreach (var i in Model.appDatDV)
+		{
+			tongDV += i.TongTien;
+		}
+	}
+	// ICollection<AppDatDV> appDatDVs = Model.appDatDV; // Đoạn mã gốc
+	ICollection<AppDatDV> appDatDVs = Model.appDatDV ?? new List<AppDatDV>(); // Sửa lại dòng này
+
+
+	var a = 0;
+}
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		var editButton = document.querySelector('.edit-button');
+		var editableFields = document.querySelectorAll('.editable-field');
+
+		editButton.addEventListener('click', function () {
+			for (var i = 0; i < editableFields.length; i++) {
+				editableFields[i].readOnly = !editableFields[i].readOnly;
+			}
+			var isAnyFieldEditable = Array.from(editableFields).some(function (field) {
+				return !field.readOnly;
+			});
+
+			if (isAnyFieldEditable) {
+				editButton.style.backgroundColor = "#046f1b";
+			} else {
+				editButton.style.backgroundColor = "";
+			}
+		});
+	});
+</script>
+
+
+<!-- Rest of your code -->
+
+<style>
+	.BoxDV {
+		background-color: #ffc168;
+		font-weight: 640;
+	}
+
+		.BoxDV:hover {
+			background-color: rgb(225, 225, 225);
+		}
+
+	.f-childDetail {
+		border: double 3px rgb(231, 231, 231);
+	}
+</style>
+<div class="container-fluit  m-5 mt-5  fs-4">
+	<div class="row py-5 rounded custom-shadow px-4" style="background-color: rgb(200, 220, 220);">
+		<form asp-action="UpdateDP" asp-route-idDP="@Model.IdDatPhong" method="post" class="col-5 mx-auto">
+			<div class=" rounded-2 p-3 f-childDetail d-flex flex-column align-items-center">
+				<div class="row w-100 mb-0">
+					<div class="col-6 p-0 fs-3 fw-bold mb-3 mt-3">Thông tin Khách hàng</div>
+					<div class="col-6 d-flex justify-content-end p-0">
+						<button type="button" class="btn btn-secondary mx-1 btn-sm edit-button"><i class="fas fa-user-edit"></i></button>
+					</div>
+				</div>
+				<div class="row w-100 mb-3 pb-2" style="border-bottom: 1px solid rgb(255, 255, 255);">
+					<div class="col-7 p-0">
+						<div class="my-3">Họ tên</div>
+						<input type="text" asp-for="@Model.appKhachHang.HoTen" class="form-control form-control-sm editable-field" id="infoHoTen" readonly />
+					</div>
+					<div class="col-4 p-0 ms-auto">
+						<div class="my-3">Số điện thoại * </div>
+						<input type="text" asp-for="@Model.appKhachHang.SDT" class="form-control form-control-sm editable-field" readonly />
+					</div>
+				</div>
+				<div class="row w-100 mb-0">
+					<div class="col-6 fs-3 fw-bold p-0 mt-3">Thông tin Đặt phòng VP01</div>
+					<div class="col-6 d-flex justify-content-end p-0">
+						<button type="button" class="btn btn-secondary mx-1 btn-sm"><i class="fas fa-user-edit"></i></button>
+					</div>
+				</div>
+				<div class="row w-100 mb-3 pb-2" style="border-bottom: 1px solid rgb(255, 255, 255);">
+					<div class="col-4 p-0">
+						<div class="my-3">Ngày</div>
+						<input type="Date" asp-for="@Model.TGBatDau" class="form-control form-control-sm" disabled />
+					</div>
+					<div class="col-3 p-0 ms-auto">
+						<div class="my-3">Start</div>
+						<input type="Time" asp-for="@Model.TGBatDau" class="form-control form-control-sm" />
+					</div>
+					<div class="col-3 p-0 ms-auto">
+						<div class="my-3">End</div>
+						<input type="time" asp-for="@Model.TGKetThuc" class="form-control form-control-sm" />
+					</div>
+				</div>
+
+				<div class="row w-100 mb-3">
+					<div class="col-12 h5 p-0 text-center mb-3 fs-3 fw-bold my-5">Thông tin Dịch vụ</div>
+					<input type="text" class="form-control  rounded-3" placeholder="Search dịch vụ..." />
+				</div>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Dịch vụ</th>
+							<th>Giá</th>
+							<th>SL</th>
+							<th>Size</th>
+							<th class="text-end">Tạm tính</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="w-100">
+							<td>Đặt Phòng</td>
+							<td> @Model.appPhong.Gia.ToString("N0") VNĐ</td>
+							<td class="col-auto">
+								@Model.TongThoiLuong.ToString("N2") Giờ
+							</td>
+							<td class="col-1">
+							</td>
+							<td class="text-end"> @Model.TongTien.ToString("N0") VNĐ</td>
+							<td class="col-auto text-end px-3"></td>
+						</tr>
+						@foreach (var appDatDV in Model.appDatDV)
+						{
+							<tr>
+								<td>@appDatDV.appDichVus.TenDv</td>
+								<td>@appDatDV.appDichVus.Gia</td>
+								<td class="col-2">
+									<input type="number" asp-for="@appDatDV.SoLuong" min="0" max="100" step="1" style="width: 55px;" class="border border-none" />
+								</td>
+								<td class="col-1">
+									<input type="text" asp-for="@appDatDV.Size" min="0" max="100" step="1" style="width: 55px;" class="border border-none" />
+								</td>
+								<td class="text-end">@appDatDV.TongTien</td>
+								<td class="col-1 text-end px-3">
+									<a asp-action="DeleteDVDatPhong" asp-controller="AdminDatPhong" asp-route-id="@appDatDV.IdDatDV" asp-route-idDP="@Model.IdDatPhong" class="col-3 text-decoration-none text-dark border border-0 btn-outline-none">
+										<i class="fas fa-times fs-2" style="color: #ff0000;"></i>
+									</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+				@if (Model.appDatDV.Count <= 0)
+				{
+					<p>không order Nước </p>
+				}
+				<div class="row w-100 mb-3">
+					<button type="submit" class="btn mx-1 btn-sm w-25 ms-auto fs-4" style="background-color: #4ab8b1">Lưu thay đổi</button>
+				</div>
+				<div class="row w-100 my-3 pt-4 fs-3" style="border-top: 2px solid rgb(255, 255, 255);">
+					<table>
+						<thead>
+						<th></th>
+						<th></th>
+						<th></th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Tổng Dịch vụ: </td>
+								<td class="fst-italic"><span class="fw-bold">@Model.appDatDV.Count</span> dịch vụ + <span class="fw-bold">1</span> Phòng</td>
+								<td class="text-end">@($"{Model.TongTien + tongDV:N0}") VNĐ</td>
+							</tr>
+							<tr>
+								<td>Thuế: </td>
+								<td>0%</td>
+								<td class=" text-end"> 0.0 VNĐ</td>
+							</tr>
+							<tr>
+								<td>Giảm giá: </td>
+								<td>N/A</td>
+								<td class=" text-end">0.0 VNĐ</td>
+							</tr>
+							<tr>
+								<td class="fs-3 fw-bold">Tổng thanh toán: </td>
+								<td></td>
+								<td class=" text-end text-danger fw-bold"> @($"{Model.TongTien + tongDV:N0}") VNĐ</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="row w-100  mb-3 pt-3" style="border-top: 2px solid rgb(255, 255, 255);">
+					<button class="btn btn-success col-5">Xuất hóa đơn</button>
+					<button class="btn btn-success col-5 ms-auto">Thanh Toán</button>
+				</div>
+			</div>
+		</form>
+
+		<div class="col-7 mx-auto rounded-2 p-3 px-4 f-childDetail">
+			<div class="row  px-4">
+				<button class="col-1 btn btn-light mx-1 btn-sm fs-4 my-2 border border-0 btn-outline-none">
+					<a asp-action="ChiTietDP" asp-controller="AdminDatPhong" asp-route-id="" class="col-3 text-decoration-none text-dark border border-0 btn-outline-none">
+						<i class="fas fa-home text-black"></i>
+					</a>
+				</button>
+				<button class="col-1 btn btn-light mx-1 btn-sm fs-4 my-2 border border-0">
+					<a asp-action="ChiTietDP" asp-controller="AdminDatPhong" asp-route-idDmDV="0" class="col-3 text-decoration-none text-dark border border-0">
+						All
+					</a>
+				</button>
+				@foreach (var item in ViewBag.DmDV)
+				{
+					<button class="col-2 btn btn-secondary mx-1 btn-sm fs-4 my-2">
+						<a asp-action="ChiTietDP" asp-controller="AdminDatPhong" asp-route-idDmDV="@item.IdDmDichVu" class="col-3 text-decoration-none text-dark">
+							@item.TenDmDv
+						</a>
+					</button>
+				}
+			</div>
+			<div class="row bg-light mt-2 rounded-2" style="height: 3px;"></div>
+
+			<div class="row mx-1 mb-3 pt-2">
+				<input type="text" class="w-100 border border-none  rounded-3" placeholder="Tìm kiếm.." style="height: 35px;" />
+			</div>
+			<div class="row mt-3 me-2">
+				@foreach (var item in ViewBag.DichVus)
+				{
+					<a asp-action="AddDVDatPhong" asp-controller="AdminDatPhong" asp-route-idDP="@Model.IdDatPhong" asp-route-idDV="@item.IdDichVu" class="col-3 text-decoration-none text-dark">
+						<div class=" p-1 py-0 ">
+							<span class="w-100 rounded m-2 text-center d-flex align-items-center justify-content-center BoxDV p-3" style="min-height: 50px; ">
+								@item.TenDv
+							</span>
+						</div>
+					</a>
+				}
+			</div>
+
+		</div>
+	</div>
+
+</div>

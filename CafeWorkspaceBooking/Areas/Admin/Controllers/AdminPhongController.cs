@@ -3,6 +3,7 @@ using CafeWorkspaceBooking.Areas.Admin.ViewModels;
 using CafeWorkspaceBooking.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CafeWorkspaceBooking.Areas.Admin.Controllers
@@ -21,6 +22,10 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
                 SetErrorMesg("Hiện tại chưa có phòng");
                 return RedirectToAction ("Index", "AdminHome");
             }
+
+           
+
+
 			return View(phong);
 		}
 		public IActionResult Create()
@@ -63,9 +68,8 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
                 SetErrorMesg("Lỗi thêm " + err);
             }
             return RedirectToAction(nameof(Index));
-
 		}
-		private string UploadFile(IFormFile file, string dir)// kieu dữ liệu của file ảnh đc gửi lên server là IFormFile 
+		private string UploadFile(IFormFile file, string dir)// kieu dữ liệu của file ảnh đc gửi lên server là IFormFile
 		{
             var fName = file.FileName;
             fName = Path.GetFileNameWithoutExtension(fName)
@@ -138,7 +142,7 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
             if (phong.Img is not null)
             {
                 System.IO.File.Delete(Path.Combine(env.WebRootPath + oldPhong.Img));    // xóa ảnh cũ 
-                oldPhong.Img = UploadFile(phong.Img, env.WebRootPath);                  // lưu ảnh MỚI  vào ổ đĩa và csdl 
+                oldPhong.Img = UploadFile(phong.Img, env.WebRootPath);                  // lưu ảnh MỚI  vào ổ đĩa và csdl
             }
 
             if (phong.appImgPhongs is not null)                                         //Xóa Ảnh con và cập nhật ảnh con 
@@ -164,6 +168,7 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
 
             try
             {
+                _CafeDbContext.AppPhongs.Update(oldPhong);
                 _CafeDbContext.SaveChanges();
                 SetSuccessMesg("Cập Nhập Phòng Thành Công");
             }
@@ -172,7 +177,6 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
                 SetErrorMesg("Đã xảy ra lỗi trong quá trình xử lí" + ex.Message);
             }
 
-            _CafeDbContext.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
         public IActionResult Delete(int id, [FromServices] IWebHostEnvironment env)

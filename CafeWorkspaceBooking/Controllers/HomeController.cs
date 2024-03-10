@@ -45,15 +45,18 @@ namespace CafeWorkspaceBooking.Controllers
 			}
 			return View(phong);
 		}
+		
+		public IActionResult Contact()
+		{
+			return View();
+		}
+			//[Route("/Err/{statusCode}")]
+			//public IActionResult Error(int statusCode) {
+			//	//if ()
+			//	//{
 
-
-		//[Route("/Err/{statusCode}")]
-		//public IActionResult Error(int statusCode) {
-		//	//if ()
-		//	//{
-
-		//	//}
-		//	return View();
-		//}
-	}
+			//	//}
+			//	return View();
+			//}
+		}
 }

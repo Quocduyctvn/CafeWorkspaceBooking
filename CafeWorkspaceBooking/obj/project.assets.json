@@ -84,6 +84,18 @@
           "lib/BCrypt.Net.dll": {}
         }
       },
+      "BraintreeHttp-Dotnet/0.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BraintreeHttp-Dotnet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BraintreeHttp-Dotnet.dll": {}
+        }
+      },
+      "CKEditor/3.6.4": {
+        "type": "package"
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -876,42 +888,38 @@
           }
         }
       },
-      "Microsoft.Build/17.7.2": {
+      "Microsoft.Build/17.8.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Build.Framework": "17.7.2",
-          "Microsoft.NET.StringTools": "17.7.2",
+          "Microsoft.Build.Framework": "17.8.3",
+          "Microsoft.NET.StringTools": "17.8.3",
           "System.Collections.Immutable": "7.0.0",
           "System.Configuration.ConfigurationManager": "7.0.0",
           "System.Reflection.Metadata": "7.0.0",
           "System.Reflection.MetadataLoadContext": "7.0.0",
-          "System.Security.Permissions": "7.0.0",
-          "System.Text.Json": "7.0.0",
+          "System.Security.Principal.Windows": "5.0.0",
           "System.Threading.Tasks.Dataflow": "7.0.0"
         },
         "compile": {
-          "ref/net7.0/Microsoft.Build.dll": {
+          "ref/net8.0/Microsoft.Build.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.Build.dll": {
+          "lib/net8.0/Microsoft.Build.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
-      "Microsoft.Build.Framework/17.7.2": {
+      "Microsoft.Build.Framework/17.8.3": {
         "type": "package",
-        "dependencies": {
-          "System.Security.Permissions": "7.0.0"
-        },
         "compile": {
-          "ref/net7.0/Microsoft.Build.Framework.dll": {
+          "ref/net8.0/Microsoft.Build.Framework.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.Build.Framework.dll": {
+          "lib/net8.0/Microsoft.Build.Framework.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -1465,7 +1473,7 @@
           }
         }
       },
-      "Microsoft.DotNet.Scaffolding.Shared/8.0.0": {
+      "Microsoft.DotNet.Scaffolding.Shared/8.0.1": {
         "type": "package",
         "dependencies": {
           "Humanizer": "2.14.1",
@@ -2007,15 +2015,15 @@
           }
         }
       },
-      "Microsoft.NET.StringTools/17.7.2": {
+      "Microsoft.NET.StringTools/17.8.3": {
         "type": "package",
         "compile": {
-          "ref/net7.0/Microsoft.NET.StringTools.dll": {
+          "ref/net8.0/Microsoft.NET.StringTools.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.NET.StringTools.dll": {
+          "lib/net8.0/Microsoft.NET.StringTools.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -2057,11 +2065,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/8.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration/8.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "8.0.0"
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "8.0.1"
         },
         "compile": {
           "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
@@ -2074,11 +2082,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/8.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/8.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "8.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "8.0.1",
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
@@ -2092,11 +2100,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design/8.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.DotNet.Scaffolding.Shared": "8.0.0",
-          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "8.0.0"
+          "Microsoft.DotNet.Scaffolding.Shared": "8.0.1",
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "8.0.1"
         },
         "compile": {
           "lib/net8.0/dotnet-aspnet-codegenerator-design.dll": {
@@ -2109,11 +2117,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/8.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.DotNet.Scaffolding.Shared": "8.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "8.0.0"
+          "Microsoft.DotNet.Scaffolding.Shared": "8.0.1",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "8.0.1"
         },
         "compile": {
           "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
@@ -2126,13 +2134,13 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/8.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/8.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "6.0.24",
           "Microsoft.CodeAnalysis.CSharp": "4.8.0-3.final",
           "Microsoft.CodeAnalysis.Razor": "6.0.24",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "8.0.0"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "8.0.1"
         },
         "compile": {
           "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
@@ -2145,12 +2153,12 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/8.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Build": "17.7.2",
+          "Microsoft.Build": "17.8.3",
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "4.8.0-3.final",
-          "Microsoft.DotNet.Scaffolding.Shared": "8.0.0",
+          "Microsoft.DotNet.Scaffolding.Shared": "8.0.1",
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
@@ -2164,11 +2172,11 @@
           }
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/8.0.0": {
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.DotNet.Scaffolding.Shared": "8.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration": "8.0.0"
+          "Microsoft.DotNet.Scaffolding.Shared": "8.0.1",
+          "Microsoft.VisualStudio.Web.CodeGeneration": "8.0.1"
         },
         "compile": {
           "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
@@ -2388,6 +2396,18 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "PayPal/2.0.0-rc2": {
+        "type": "package",
+        "dependencies": {
+          "BraintreeHttp-Dotnet": "0.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Source.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Source.dll": {}
         }
       },
       "System.CodeDom/5.0.0": {
@@ -2891,7 +2911,7 @@
       "System.Security.Principal.Windows/5.0.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp3.0/_._": {
+          "ref/netcoreapp3.0/System.Security.Principal.Windows.dll": {
             "related": ".xml"
           }
         },
@@ -3136,6 +3156,377 @@
         "lib/BCrypt.Net.XML",
         "lib/BCrypt.Net.dll",
         "lib/BCrypt.Net.pdb"
+      ]
+    },
+    "BraintreeHttp-Dotnet/0.3.0": {
+      "sha512": "ARHcstlJ2uRxqJVAxhJ7PJbzsDD9us+docpKHuay6psUVpQJo4cH0negfo8rv/iEakGhx0Rxgp/HUu6ZLa+lsA==",
+      "type": "package",
+      "path": "braintreehttp-dotnet/0.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "braintreehttp-dotnet.0.3.0.nupkg.sha512",
+        "braintreehttp-dotnet.nuspec",
+        "lib/netstandard2.0/BraintreeHttp-Dotnet.dll"
+      ]
+    },
+    "CKEditor/3.6.4": {
+      "sha512": "roGF09wJmp7Zyyvq/bDzbLccKUfMumMpmgPav5U/naoVoDis1izPsSL8H/MEFG3hfFBC4HegSRwlYZG+PWHnaQ==",
+      "type": "package",
+      "path": "ckeditor/3.6.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/ckeditor/CHANGES.html",
+        "Content/Scripts/ckeditor/INSTALL.html",
+        "Content/Scripts/ckeditor/LICENSE.html",
+        "Content/Scripts/ckeditor/adapters/jquery.js",
+        "Content/Scripts/ckeditor/ckeditor.asp",
+        "Content/Scripts/ckeditor/ckeditor.js",
+        "Content/Scripts/ckeditor/ckeditor.pack",
+        "Content/Scripts/ckeditor/ckeditor.php",
+        "Content/Scripts/ckeditor/ckeditor_basic.js",
+        "Content/Scripts/ckeditor/ckeditor_basic_source.js",
+        "Content/Scripts/ckeditor/ckeditor_php4.php",
+        "Content/Scripts/ckeditor/ckeditor_php5.php",
+        "Content/Scripts/ckeditor/ckeditor_source.js",
+        "Content/Scripts/ckeditor/config.js",
+        "Content/Scripts/ckeditor/contents.css",
+        "Content/Scripts/ckeditor/images/spacer.gif",
+        "Content/Scripts/ckeditor/lang/_languages.js",
+        "Content/Scripts/ckeditor/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/lang/af.js",
+        "Content/Scripts/ckeditor/lang/ar.js",
+        "Content/Scripts/ckeditor/lang/bg.js",
+        "Content/Scripts/ckeditor/lang/bn.js",
+        "Content/Scripts/ckeditor/lang/bs.js",
+        "Content/Scripts/ckeditor/lang/ca.js",
+        "Content/Scripts/ckeditor/lang/cs.js",
+        "Content/Scripts/ckeditor/lang/cy.js",
+        "Content/Scripts/ckeditor/lang/da.js",
+        "Content/Scripts/ckeditor/lang/de.js",
+        "Content/Scripts/ckeditor/lang/el.js",
+        "Content/Scripts/ckeditor/lang/en-au.js",
+        "Content/Scripts/ckeditor/lang/en-ca.js",
+        "Content/Scripts/ckeditor/lang/en-gb.js",
+        "Content/Scripts/ckeditor/lang/en.js",
+        "Content/Scripts/ckeditor/lang/eo.js",
+        "Content/Scripts/ckeditor/lang/es.js",
+        "Content/Scripts/ckeditor/lang/et.js",
+        "Content/Scripts/ckeditor/lang/eu.js",
+        "Content/Scripts/ckeditor/lang/fa.js",
+        "Content/Scripts/ckeditor/lang/fi.js",
+        "Content/Scripts/ckeditor/lang/fo.js",
+        "Content/Scripts/ckeditor/lang/fr-ca.js",
+        "Content/Scripts/ckeditor/lang/fr.js",
+        "Content/Scripts/ckeditor/lang/gl.js",
+        "Content/Scripts/ckeditor/lang/gu.js",
+        "Content/Scripts/ckeditor/lang/he.js",
+        "Content/Scripts/ckeditor/lang/hi.js",
+        "Content/Scripts/ckeditor/lang/hr.js",
+        "Content/Scripts/ckeditor/lang/hu.js",
+        "Content/Scripts/ckeditor/lang/id.js",
+        "Content/Scripts/ckeditor/lang/is.js",
+        "Content/Scripts/ckeditor/lang/it.js",
+        "Content/Scripts/ckeditor/lang/ja.js",
+        "Content/Scripts/ckeditor/lang/ka.js",
+        "Content/Scripts/ckeditor/lang/km.js",
+        "Content/Scripts/ckeditor/lang/ko.js",
+        "Content/Scripts/ckeditor/lang/lt.js",
+        "Content/Scripts/ckeditor/lang/lv.js",
+        "Content/Scripts/ckeditor/lang/mk.js",
+        "Content/Scripts/ckeditor/lang/mn.js",
+        "Content/Scripts/ckeditor/lang/ms.js",
+        "Content/Scripts/ckeditor/lang/nb.js",
+        "Content/Scripts/ckeditor/lang/nl.js",
+        "Content/Scripts/ckeditor/lang/no.js",
+        "Content/Scripts/ckeditor/lang/pl.js",
+        "Content/Scripts/ckeditor/lang/pt-br.js",
+        "Content/Scripts/ckeditor/lang/pt.js",
+        "Content/Scripts/ckeditor/lang/ro.js",
+        "Content/Scripts/ckeditor/lang/ru.js",
+        "Content/Scripts/ckeditor/lang/sk.js",
+        "Content/Scripts/ckeditor/lang/sl.js",
+        "Content/Scripts/ckeditor/lang/sr-latn.js",
+        "Content/Scripts/ckeditor/lang/sr.js",
+        "Content/Scripts/ckeditor/lang/sv.js",
+        "Content/Scripts/ckeditor/lang/th.js",
+        "Content/Scripts/ckeditor/lang/tr.js",
+        "Content/Scripts/ckeditor/lang/ug.js",
+        "Content/Scripts/ckeditor/lang/uk.js",
+        "Content/Scripts/ckeditor/lang/vi.js",
+        "Content/Scripts/ckeditor/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/lang/zh.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/da.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/gu.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/mk.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/ro.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/vi.js",
+        "Content/Scripts/ckeditor/plugins/a11yhelp/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/about/dialogs/about.js",
+        "Content/Scripts/ckeditor/plugins/about/dialogs/logo_ckeditor.png",
+        "Content/Scripts/ckeditor/plugins/adobeair/plugin.js",
+        "Content/Scripts/ckeditor/plugins/ajax/plugin.js",
+        "Content/Scripts/ckeditor/plugins/autogrow/plugin.js",
+        "Content/Scripts/ckeditor/plugins/bbcode/plugin.js",
+        "Content/Scripts/ckeditor/plugins/clipboard/dialogs/paste.js",
+        "Content/Scripts/ckeditor/plugins/colordialog/dialogs/colordialog.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/bg.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/da.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/et.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/gu.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/hr.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/pl.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/uk.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/vi.js",
+        "Content/Scripts/ckeditor/plugins/devtools/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/devtools/plugin.js",
+        "Content/Scripts/ckeditor/plugins/dialog/dialogDefinition.js",
+        "Content/Scripts/ckeditor/plugins/div/dialogs/div.js",
+        "Content/Scripts/ckeditor/plugins/docprops/dialogs/docprops.js",
+        "Content/Scripts/ckeditor/plugins/docprops/plugin.js",
+        "Content/Scripts/ckeditor/plugins/find/dialogs/find.js",
+        "Content/Scripts/ckeditor/plugins/flash/dialogs/flash.js",
+        "Content/Scripts/ckeditor/plugins/flash/images/placeholder.png",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/button.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/checkbox.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/form.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/hiddenfield.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/radio.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/select.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/textarea.js",
+        "Content/Scripts/ckeditor/plugins/forms/dialogs/textfield.js",
+        "Content/Scripts/ckeditor/plugins/forms/images/hiddenfield.gif",
+        "Content/Scripts/ckeditor/plugins/iframe/dialogs/iframe.js",
+        "Content/Scripts/ckeditor/plugins/iframe/images/placeholder.png",
+        "Content/Scripts/ckeditor/plugins/iframedialog/plugin.js",
+        "Content/Scripts/ckeditor/plugins/image/dialogs/image.js",
+        "Content/Scripts/ckeditor/plugins/link/dialogs/anchor.js",
+        "Content/Scripts/ckeditor/plugins/link/dialogs/link.js",
+        "Content/Scripts/ckeditor/plugins/link/images/anchor.gif",
+        "Content/Scripts/ckeditor/plugins/liststyle/dialogs/liststyle.js",
+        "Content/Scripts/ckeditor/plugins/pagebreak/images/pagebreak.gif",
+        "Content/Scripts/ckeditor/plugins/pastefromword/filter/default.js",
+        "Content/Scripts/ckeditor/plugins/pastetext/dialogs/pastetext.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/dialogs/placeholder.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/bg.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/da.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/et.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/hr.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/pl.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/uk.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/vi.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/placeholder/placeholder.gif",
+        "Content/Scripts/ckeditor/plugins/placeholder/plugin.js",
+        "Content/Scripts/ckeditor/plugins/preview/preview.html",
+        "Content/Scripts/ckeditor/plugins/scayt/dialogs/options.js",
+        "Content/Scripts/ckeditor/plugins/scayt/dialogs/toolbar.css",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_address.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_blockquote.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_div.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h1.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h2.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h3.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h4.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h5.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_h6.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_p.png",
+        "Content/Scripts/ckeditor/plugins/showblocks/images/block_pre.png",
+        "Content/Scripts/ckeditor/plugins/smiley/dialogs/smiley.js",
+        "Content/Scripts/ckeditor/plugins/smiley/images/angel_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/angry_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/broken_heart.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/confused_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/cry_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/devil_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/embaressed_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/envelope.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/heart.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/kiss.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/lightbulb.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/omg_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/regular_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/sad_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/shades_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/teeth_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/thumbs_down.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/thumbs_up.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/tounge_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif",
+        "Content/Scripts/ckeditor/plugins/smiley/images/wink_smile.gif",
+        "Content/Scripts/ckeditor/plugins/specialchar/dialogs/specialchar.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/et.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/hr.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/specialchar/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/styles/styles/default.js",
+        "Content/Scripts/ckeditor/plugins/stylesheetparser/plugin.js",
+        "Content/Scripts/ckeditor/plugins/table/dialogs/table.js",
+        "Content/Scripts/ckeditor/plugins/tableresize/plugin.js",
+        "Content/Scripts/ckeditor/plugins/tabletools/dialogs/tableCell.js",
+        "Content/Scripts/ckeditor/plugins/templates/dialogs/templates.js",
+        "Content/Scripts/ckeditor/plugins/templates/templates/default.js",
+        "Content/Scripts/ckeditor/plugins/templates/templates/images/template1.gif",
+        "Content/Scripts/ckeditor/plugins/templates/templates/images/template2.gif",
+        "Content/Scripts/ckeditor/plugins/templates/templates/images/template3.gif",
+        "Content/Scripts/ckeditor/plugins/uicolor/dialogs/uicolor.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/_translationstatus.txt",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/bg.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/cs.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/cy.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/da.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/de.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/el.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/en.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/eo.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/et.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/fa.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/fi.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/fr.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/he.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/hr.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/it.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/mk.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/nb.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/nl.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/no.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/pl.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/pt-br.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/tr.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/ug.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/uk.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/vi.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/lang/zh-cn.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/plugin.js",
+        "Content/Scripts/ckeditor/plugins/uicolor/uicolor.gif",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/hue_bg.png",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/hue_thumb.png",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/picker_mask.png",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/picker_thumb.png",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/assets/yui.css",
+        "Content/Scripts/ckeditor/plugins/uicolor/yui/yui.js",
+        "Content/Scripts/ckeditor/plugins/wsc/dialogs/ciframe.html",
+        "Content/Scripts/ckeditor/plugins/wsc/dialogs/tmpFrameset.html",
+        "Content/Scripts/ckeditor/plugins/wsc/dialogs/wsc.css",
+        "Content/Scripts/ckeditor/plugins/wsc/dialogs/wsc.js",
+        "Content/Scripts/ckeditor/plugins/xml/plugin.js",
+        "Content/Scripts/ckeditor/skins/kama/dialog.css",
+        "Content/Scripts/ckeditor/skins/kama/editor.css",
+        "Content/Scripts/ckeditor/skins/kama/icons.png",
+        "Content/Scripts/ckeditor/skins/kama/icons_rtl.png",
+        "Content/Scripts/ckeditor/skins/kama/images/dialog_sides.gif",
+        "Content/Scripts/ckeditor/skins/kama/images/dialog_sides.png",
+        "Content/Scripts/ckeditor/skins/kama/images/dialog_sides_rtl.png",
+        "Content/Scripts/ckeditor/skins/kama/images/mini.gif",
+        "Content/Scripts/ckeditor/skins/kama/images/noimage.png",
+        "Content/Scripts/ckeditor/skins/kama/images/sprites.png",
+        "Content/Scripts/ckeditor/skins/kama/images/sprites_ie6.png",
+        "Content/Scripts/ckeditor/skins/kama/images/toolbar_start.gif",
+        "Content/Scripts/ckeditor/skins/kama/skin.js",
+        "Content/Scripts/ckeditor/skins/kama/templates.css",
+        "Content/Scripts/ckeditor/skins/office2003/dialog.css",
+        "Content/Scripts/ckeditor/skins/office2003/editor.css",
+        "Content/Scripts/ckeditor/skins/office2003/icons.png",
+        "Content/Scripts/ckeditor/skins/office2003/icons_rtl.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/dialog_sides.gif",
+        "Content/Scripts/ckeditor/skins/office2003/images/dialog_sides.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/dialog_sides_rtl.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/mini.gif",
+        "Content/Scripts/ckeditor/skins/office2003/images/noimage.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/sprites.png",
+        "Content/Scripts/ckeditor/skins/office2003/images/sprites_ie6.png",
+        "Content/Scripts/ckeditor/skins/office2003/skin.js",
+        "Content/Scripts/ckeditor/skins/office2003/templates.css",
+        "Content/Scripts/ckeditor/skins/v2/dialog.css",
+        "Content/Scripts/ckeditor/skins/v2/editor.css",
+        "Content/Scripts/ckeditor/skins/v2/icons.png",
+        "Content/Scripts/ckeditor/skins/v2/icons_rtl.png",
+        "Content/Scripts/ckeditor/skins/v2/images/dialog_sides.gif",
+        "Content/Scripts/ckeditor/skins/v2/images/dialog_sides.png",
+        "Content/Scripts/ckeditor/skins/v2/images/dialog_sides_rtl.png",
+        "Content/Scripts/ckeditor/skins/v2/images/mini.gif",
+        "Content/Scripts/ckeditor/skins/v2/images/noimage.png",
+        "Content/Scripts/ckeditor/skins/v2/images/sprites.png",
+        "Content/Scripts/ckeditor/skins/v2/images/sprites_ie6.png",
+        "Content/Scripts/ckeditor/skins/v2/images/toolbar_start.gif",
+        "Content/Scripts/ckeditor/skins/v2/skin.js",
+        "Content/Scripts/ckeditor/skins/v2/templates.css",
+        "Content/Scripts/ckeditor/themes/default/theme.js",
+        "ckeditor.3.6.4.nupkg.sha512",
+        "ckeditor.nuspec"
       ]
     },
     "Humanizer/2.14.1": {
@@ -4109,10 +4500,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Build/17.7.2": {
-      "sha512": "AmWnumxsMiRycFfE3kq/XnFFTAoPpCWl3UuiKQWCa5Z0+hBKVoiydzS2iXJGd3x+jry+qaTR9GzoezjV9NFT5A==",
+    "Microsoft.Build/17.8.3": {
+      "sha512": "jOxP2DrBZb2zuDO5M8LfI50SCdXlahgUHJ6mH0jz4OBID0F9o+DVggk0CPAONmcbUPo2SsQCFkMaxmHkKLj99Q==",
       "type": "package",
-      "path": "microsoft.build/17.7.2",
+      "path": "microsoft.build/17.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4121,22 +4512,22 @@
         "lib/net472/Microsoft.Build.dll",
         "lib/net472/Microsoft.Build.pdb",
         "lib/net472/Microsoft.Build.xml",
-        "lib/net7.0/Microsoft.Build.dll",
-        "lib/net7.0/Microsoft.Build.pdb",
-        "lib/net7.0/Microsoft.Build.xml",
-        "microsoft.build.17.7.2.nupkg.sha512",
+        "lib/net8.0/Microsoft.Build.dll",
+        "lib/net8.0/Microsoft.Build.pdb",
+        "lib/net8.0/Microsoft.Build.xml",
+        "microsoft.build.17.8.3.nupkg.sha512",
         "microsoft.build.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.Build.dll",
         "ref/net472/Microsoft.Build.xml",
-        "ref/net7.0/Microsoft.Build.dll",
-        "ref/net7.0/Microsoft.Build.xml"
+        "ref/net8.0/Microsoft.Build.dll",
+        "ref/net8.0/Microsoft.Build.xml"
       ]
     },
-    "Microsoft.Build.Framework/17.7.2": {
-      "sha512": "F+SglYQv6ij5RK4Bmd1X4q01E2ry4M8/huTIZ/1Vk7ZoxdT2J3vmV23cnJZsA/ZLunOTv3B905TU5J1eFmWNPw==",
+    "Microsoft.Build.Framework/17.8.3": {
+      "sha512": "NrQZJW8TlKVPx72yltGb8SVz3P5mNRk9fNiD/ao8jRSk48WqIIdCn99q4IjlVmPcruuQ+yLdjNQLL8Rb4c916g==",
       "type": "package",
-      "path": "microsoft.build.framework/17.7.2",
+      "path": "microsoft.build.framework/17.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4145,16 +4536,16 @@
         "lib/net472/Microsoft.Build.Framework.dll",
         "lib/net472/Microsoft.Build.Framework.pdb",
         "lib/net472/Microsoft.Build.Framework.xml",
-        "lib/net7.0/Microsoft.Build.Framework.dll",
-        "lib/net7.0/Microsoft.Build.Framework.pdb",
-        "lib/net7.0/Microsoft.Build.Framework.xml",
-        "microsoft.build.framework.17.7.2.nupkg.sha512",
+        "lib/net8.0/Microsoft.Build.Framework.dll",
+        "lib/net8.0/Microsoft.Build.Framework.pdb",
+        "lib/net8.0/Microsoft.Build.Framework.xml",
+        "microsoft.build.framework.17.8.3.nupkg.sha512",
         "microsoft.build.framework.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.Build.Framework.dll",
         "ref/net472/Microsoft.Build.Framework.xml",
-        "ref/net7.0/Microsoft.Build.Framework.dll",
-        "ref/net7.0/Microsoft.Build.Framework.xml",
+        "ref/net8.0/Microsoft.Build.Framework.dll",
+        "ref/net8.0/Microsoft.Build.Framework.xml",
         "ref/netstandard2.0/Microsoft.Build.Framework.dll",
         "ref/netstandard2.0/Microsoft.Build.Framework.xml"
       ]
@@ -5393,17 +5784,17 @@
         "microsoft.diasymreader.nuspec"
       ]
     },
-    "Microsoft.DotNet.Scaffolding.Shared/8.0.0": {
-      "sha512": "iJGJitXhFMws4ac1UOn+Q4kxhDwCAjV5IDsMbRiQxUlxhyE7NZJpb2NmbrpalQOMHCdfyJXsvqRYtgc10TdN9w==",
+    "Microsoft.DotNet.Scaffolding.Shared/8.0.1": {
+      "sha512": "R8qGELESsOCMRgp42UKe1WMmhQelXHnziZqivQRq8m5RT5qeIatVTrEpJyHuygYJDREhBgGmWHjU5GKAZQ4Ngg==",
       "type": "package",
-      "path": "microsoft.dotnet.scaffolding.shared/8.0.0",
+      "path": "microsoft.dotnet.scaffolding.shared/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.DotNet.Scaffolding.Shared.dll",
         "lib/netstandard2.0/Microsoft.DotNet.Scaffolding.Shared.xml",
-        "microsoft.dotnet.scaffolding.shared.8.0.0.nupkg.sha512",
+        "microsoft.dotnet.scaffolding.shared.8.0.1.nupkg.sha512",
         "microsoft.dotnet.scaffolding.shared.nuspec"
       ]
     },
@@ -6142,10 +6533,10 @@
         "microsoft.jsinterop.nuspec"
       ]
     },
-    "Microsoft.NET.StringTools/17.7.2": {
-      "sha512": "GDm2qPXJeWR4FSwY90zYZ+Wd0CN4FE+Nu2F57Vu8avatMzNQxV9WaVEBZFKbT4JLhNcXKc0CKBO50oVoRJR5BQ==",
+    "Microsoft.NET.StringTools/17.8.3": {
+      "sha512": "y6DiuacjlIfXH3XVQG5htf+4oheinZAo7sHbITB3z7yCXQec48f9ZhGSXkr+xn1bfl73Yc3ZQEW2peJ5X68AvQ==",
       "type": "package",
-      "path": "microsoft.net.stringtools/17.7.2",
+      "path": "microsoft.net.stringtools/17.8.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6154,19 +6545,19 @@
         "lib/net472/Microsoft.NET.StringTools.dll",
         "lib/net472/Microsoft.NET.StringTools.pdb",
         "lib/net472/Microsoft.NET.StringTools.xml",
-        "lib/net7.0/Microsoft.NET.StringTools.dll",
-        "lib/net7.0/Microsoft.NET.StringTools.pdb",
-        "lib/net7.0/Microsoft.NET.StringTools.xml",
+        "lib/net8.0/Microsoft.NET.StringTools.dll",
+        "lib/net8.0/Microsoft.NET.StringTools.pdb",
+        "lib/net8.0/Microsoft.NET.StringTools.xml",
         "lib/netstandard2.0/Microsoft.NET.StringTools.dll",
         "lib/netstandard2.0/Microsoft.NET.StringTools.pdb",
         "lib/netstandard2.0/Microsoft.NET.StringTools.xml",
-        "microsoft.net.stringtools.17.7.2.nupkg.sha512",
+        "microsoft.net.stringtools.17.8.3.nupkg.sha512",
         "microsoft.net.stringtools.nuspec",
         "notices/THIRDPARTYNOTICES.txt",
         "ref/net472/Microsoft.NET.StringTools.dll",
         "ref/net472/Microsoft.NET.StringTools.xml",
-        "ref/net7.0/Microsoft.NET.StringTools.dll",
-        "ref/net7.0/Microsoft.NET.StringTools.xml",
+        "ref/net8.0/Microsoft.NET.StringTools.dll",
+        "ref/net8.0/Microsoft.NET.StringTools.xml",
         "ref/netstandard2.0/Microsoft.NET.StringTools.dll",
         "ref/netstandard2.0/Microsoft.NET.StringTools.xml"
       ]
@@ -6246,38 +6637,38 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/8.0.0": {
-      "sha512": "D4drYk70SKMO+9NqIEIhOesO99SJ8VLRm/BSAI9ZBJvW9TIxp/n9I71fgMviI/WzMk3mWuyYHatxEZi5D4KIMQ==",
+    "Microsoft.VisualStudio.Web.CodeGeneration/8.0.1": {
+      "sha512": "UyxrsdY2eL4qinTpD7XHWmh+OH3318f01I2QCGhV3NFKY6rHCKlAop6Vii9ca3wb8tnyy+vr5GaAHl//OA1OtA==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration/8.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
-        "microsoft.visualstudio.web.codegeneration.8.0.0.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.8.0.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/8.0.0": {
-      "sha512": "+w0vjOilZwtp7pZRH4hG0YC143zOD57mzCVvCJc07RKqOhFRJv8JclWfvV57AQ6wt8ZQEqQe+dut/rkjgq/kVQ==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/8.0.1": {
+      "sha512": "wJLw/lSafPdBxGoCH9N0LNavncjZ9gj/kdLwe8HwCZ2RJ5hmzocQZ612p7WqOBRNmavvwuNFsc1kPfBU55McSQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.core/8.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.core/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
-        "microsoft.visualstudio.web.codegeneration.core.8.0.0.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.core.8.0.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.core.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Design/8.0.0": {
-      "sha512": "b+a6P95dw2zwxaYs5Nhh652Svrz5+8o/4PpuyOd7HYG5FK3Vb6RxMGBF6qi1DsWEkK0e6w6dNwS7Qs7GZH/7sw==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/8.0.1": {
+      "sha512": "MKDpWTfdyimrrM/G+tqSItfzm0b6dw+zUCX45MurZPsYj5hRTHkZ5oxUDvrP9syhXVS32Bi6LN5dqw2UWp9TCw==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.design/8.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.design/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6285,14 +6676,14 @@
         "README.md",
         "lib/net8.0/dotnet-aspnet-codegenerator-design.dll",
         "lib/net8.0/dotnet-aspnet-codegenerator-design.xml",
-        "microsoft.visualstudio.web.codegeneration.design.8.0.0.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.design.8.0.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.design.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/8.0.0": {
-      "sha512": "a3ek/NReRYLkukwidFmrjKosQnikjSODDKgTTtrNJaPMnnv/UcjoCf4h1vk0ntATZBf48eIqfJnSjIl5RBXSOg==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/8.0.1": {
+      "sha512": "8l0lqCjlUI61FLaB2T+NdSRYBT0D2VsTWFFIO0Y6DXftcXYdo4kRzuDszu7Fn3rvnRhJDFgZ4v4qv1f0YR+TqA==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/8.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6301,46 +6692,47 @@
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.runtimeconfig.json",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.xml",
-        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.8.0.0.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.entityframeworkcore.8.0.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/8.0.0": {
-      "sha512": "h5q8c6xEpc1TCL4t8pHPJBgKxmxUY48Fny6NBTSBmanGZW+ygwUy89Z5w70oX99kVcWtxhg4reYBva9cYHrMgQ==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/8.0.1": {
+      "sha512": "xFoUhFd9NLvIyKq8udtyZLxZRoeHLhPBJc63A50Du9Sc8jJ9WZQo3qNxfgtaVXVugk5Wmr7ZdHFVijjF9xmq4Q==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.templating/8.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.xml",
-        "microsoft.visualstudio.web.codegeneration.templating.8.0.0.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.templating.8.0.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.templating.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/8.0.0": {
-      "sha512": "wu8CBn8mj15YoygfjLAzpJkReFv9RdFoRupbr2BKgqEKNd/hKc2Q8k2at4gp2dmso1IMKfaSQwlrlM7I/RWgqA==",
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/8.0.1": {
+      "sha512": "20i3BGrAWDV+XlFwrbqAbO77EQEJe6betZMmgi9F4W6+hn5QrwNzP6TrEnkqksGvbRImzo147fRlTREbnIixRg==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegeneration.utils/8.0.0",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
-        "microsoft.visualstudio.web.codegeneration.utils.8.0.0.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.utils.8.0.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegeneration.utils.nuspec"
       ]
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/8.0.0": {
-      "sha512": "6Ric/ghGqFUdG8ddsTPYXK7pyaFSwTl73ohTdBJQGS+awaW39kBzIllw/tbZ7LXCvVPwW3Z4xam+ovYt60i0CA==",
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/8.0.1": {
+      "sha512": "uQ3QMo7+xhQQ6N1slPmjP1aUj6bXtgyLxul7JwHH6n0yocL/cP2j0GDxZvAfva2er+lFEtOQg2gJb3v6I3nioQ==",
       "type": "package",
-      "path": "microsoft.visualstudio.web.codegenerators.mvc/8.0.0",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Generators/ParameterDefinitions/area.json",
+        "Generators/ParameterDefinitions/blazor-identity.json",
         "Generators/ParameterDefinitions/blazor.json",
         "Generators/ParameterDefinitions/controller.json",
         "Generators/ParameterDefinitions/identity.json",
@@ -6348,19 +6740,63 @@
         "Generators/ParameterDefinitions/razorpage.json",
         "Generators/ParameterDefinitions/view.json",
         "Icon.png",
-        "Templates/Blazor/Create.Interfaces.cs",
-        "Templates/Blazor/Create.cs",
         "Templates/Blazor/Create.tt",
-        "Templates/Blazor/Delete.cs",
         "Templates/Blazor/Delete.tt",
-        "Templates/Blazor/Details.cs",
         "Templates/Blazor/Details.tt",
-        "Templates/Blazor/Edit.cs",
         "Templates/Blazor/Edit.tt",
-        "Templates/Blazor/Index.cs",
         "Templates/Blazor/Index.tt",
+        "Templates/BlazorIdentity/IdentityComponentsEndpointRouteBuilderExtensions.tt",
+        "Templates/BlazorIdentity/IdentityNoOpEmailSender.tt",
+        "Templates/BlazorIdentity/IdentityRedirectManager.tt",
+        "Templates/BlazorIdentity/IdentityRevalidatingAuthenticationStateProvider.tt",
+        "Templates/BlazorIdentity/IdentityUserAccessor.tt",
+        "Templates/BlazorIdentity/Pages/ConfirmEmail.tt",
+        "Templates/BlazorIdentity/Pages/ConfirmEmailChange.tt",
+        "Templates/BlazorIdentity/Pages/ExternalLogin.tt",
+        "Templates/BlazorIdentity/Pages/ForgotPassword.tt",
+        "Templates/BlazorIdentity/Pages/ForgotPasswordConfirmation.tt",
+        "Templates/BlazorIdentity/Pages/InvalidPasswordReset.tt",
+        "Templates/BlazorIdentity/Pages/InvalidUser.tt",
+        "Templates/BlazorIdentity/Pages/Lockout.tt",
+        "Templates/BlazorIdentity/Pages/Login.tt",
+        "Templates/BlazorIdentity/Pages/LoginWith2fa.tt",
+        "Templates/BlazorIdentity/Pages/LoginWithRecoveryCode.tt",
+        "Templates/BlazorIdentity/Pages/Manage/ChangePassword.tt",
+        "Templates/BlazorIdentity/Pages/Manage/DeletePersonalData.tt",
+        "Templates/BlazorIdentity/Pages/Manage/Disable2fa.tt",
+        "Templates/BlazorIdentity/Pages/Manage/Email.tt",
+        "Templates/BlazorIdentity/Pages/Manage/EnableAuthenticator.tt",
+        "Templates/BlazorIdentity/Pages/Manage/ExternalLogins.tt",
+        "Templates/BlazorIdentity/Pages/Manage/GenerateRecoveryCodes.tt",
+        "Templates/BlazorIdentity/Pages/Manage/Index.tt",
+        "Templates/BlazorIdentity/Pages/Manage/PersonalData.tt",
+        "Templates/BlazorIdentity/Pages/Manage/ResetAuthenticator.tt",
+        "Templates/BlazorIdentity/Pages/Manage/SetPassword.tt",
+        "Templates/BlazorIdentity/Pages/Manage/TwoFactorAuthentication.tt",
+        "Templates/BlazorIdentity/Pages/Manage/_Imports.tt",
+        "Templates/BlazorIdentity/Pages/Register.tt",
+        "Templates/BlazorIdentity/Pages/RegisterConfirmation.tt",
+        "Templates/BlazorIdentity/Pages/ResendEmailConfirmation.tt",
+        "Templates/BlazorIdentity/Pages/ResetPassword.tt",
+        "Templates/BlazorIdentity/Pages/ResetPasswordConfirmation.tt",
+        "Templates/BlazorIdentity/Pages/_Imports.tt",
+        "Templates/BlazorIdentity/Shared/AccountLayout.tt",
+        "Templates/BlazorIdentity/Shared/ExternalLoginPicker.tt",
+        "Templates/BlazorIdentity/Shared/ManageLayout.tt",
+        "Templates/BlazorIdentity/Shared/ManageNavMenu.tt",
+        "Templates/BlazorIdentity/Shared/RedirectToLogin.tt",
+        "Templates/BlazorIdentity/Shared/ShowRecoveryCodes.tt",
+        "Templates/BlazorIdentity/Shared/StatusMessage.tt",
         "Templates/ControllerGenerator/ApiControllerWithContext.cshtml",
         "Templates/ControllerGenerator/MvcControllerWithContext.cshtml",
+        "Templates/General/IdentityApplicationUser.Interfaces.cs",
+        "Templates/General/IdentityApplicationUser.cs",
+        "Templates/General/IdentityApplicationUser.tt",
+        "Templates/General/IdentityApplicationUserModel.cs",
+        "Templates/General/IdentityDbContext.Interfaces.cs",
+        "Templates/General/IdentityDbContext.cs",
+        "Templates/General/IdentityDbContext.tt",
+        "Templates/General/IdentityDbContextModel.cs",
         "Templates/Identity/Data/ApplicationDbContext.cshtml",
         "Templates/Identity/Data/ApplicationUser.cshtml",
         "Templates/Identity/IdentityHostingStartup.cshtml",
@@ -6800,13 +7236,14 @@
         "Templates/ViewGenerator_Versioned/Bootstrap4/_ValidationScriptsPartial.cshtml",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll",
         "lib/net8.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.xml",
+        "lib/net8.0/blazorIdentityChanges.json",
         "lib/net8.0/blazorWebCrudChanges.json",
         "lib/net8.0/bootstrap3_identitygeneratorfilesconfig.json",
         "lib/net8.0/bootstrap4_identitygeneratorfilesconfig.json",
         "lib/net8.0/bootstrap5_identitygeneratorfilesconfig.json",
         "lib/net8.0/identityMinimalHostingChanges.json",
         "lib/net8.0/minimalApiChanges.json",
-        "microsoft.visualstudio.web.codegenerators.mvc.8.0.0.nupkg.sha512",
+        "microsoft.visualstudio.web.codegenerators.mvc.8.0.1.nupkg.sha512",
         "microsoft.visualstudio.web.codegenerators.mvc.nuspec"
       ]
     },
@@ -7175,6 +7612,18 @@
         "lib/netstandard2.0/NuGet.Versioning.xml",
         "nuget.versioning.6.3.1.nupkg.sha512",
         "nuget.versioning.nuspec"
+      ]
+    },
+    "PayPal/2.0.0-rc2": {
+      "sha512": "QmsC08dT2Bp4zxsWAXYnnYDL3x870LbC81Hodlmm3Df/WGUOVkcyMSFcTdZ8l0Xw823WW6WgZVl2ZIx7phWuCw==",
+      "type": "package",
+      "path": "paypal/2.0.0-rc2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Source.dll",
+        "paypal.2.0.0-rc2.nupkg.sha512",
+        "paypal.nuspec"
       ]
     },
     "System.CodeDom/5.0.0": {
@@ -8484,13 +8933,15 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "BCrypt-Official >= 0.1.109",
+      "CKEditor >= 3.6.4",
       "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter >= 8.0.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.1",
       "Microsoft.EntityFrameworkCore >= 8.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 2.0.0-preview1-final",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.1",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.1",
+      "PayPal >= 2.0.0-rc2"
     ]
   },
   "packageFolders": {
@@ -8553,6 +9004,10 @@
             "target": "Package",
             "version": "[0.1.109, )"
           },
+          "CKEditor": {
+            "target": "Package",
+            "version": "[3.6.4, )"
+          },
           "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
             "target": "Package",
             "version": "[8.0.1, )"
@@ -8581,7 +9036,11 @@
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[8.0.0, )"
+            "version": "[8.0.1, )"
+          },
+          "PayPal": {
+            "target": "Package",
+            "version": "[2.0.0-rc2, )"
           }
         },
         "imports": [

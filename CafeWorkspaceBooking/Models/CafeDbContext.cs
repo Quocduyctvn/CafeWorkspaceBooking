@@ -11,8 +11,7 @@ namespace CafeWorkspaceBooking.Models
 		}
 		public DbSet<AppDanhGia> AppDanhGias { get; set; }
 		public DbSet<AppDatPhong> appDatPhongs { get; set; }
-		public DbSet<AppDichVu> appDichVus { get; set; }
-		public DbSet<AppDVPhong> AppDVPhongs { get; set; }
+
 		public DbSet<AppHuyDatPhong> AppHuyDatPhongs { get; set; }
 		public DbSet<AppImgPhong> AppImgPhongs { get; set; }
 		public DbSet<AppKhachHang> AppKhachHangs { get; set; }
@@ -21,10 +20,20 @@ namespace CafeWorkspaceBooking.Models
 		// public DbSet<AppLoaiPhong> AppLoaiPhongs { get; set; }
 		public DbSet<AppNhanVien> AppNhanViens { get; set; }
 		public DbSet<AppPhong> AppPhongs { get; set; }
-		//public DbSet<AppTGDatPhong> AppTGDatPhongs { get; set; }
+        public DbSet<AppThongBao> AppThongBaos { get; set; }
 
-		// public DbSet<AppRole> AppRoles { get; set; }
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        public DbSet<AppDichVu> appDichVus { get; set; }
+        public DbSet<AppDatDV> AppDatDVs { get; set; }
+        public DbSet<AppDmDichVu> AppDmDichVus { get; set; }
+        public DbSet<AppHuyDatDV> AppHuyDatDV { get; set; }
+        public DbSet<AppImgDV> AppImgDV { get; set; }
+
+
+        //public DbSet<AppTGDatPhong> AppTGDatPhongs { get; set; }
+
+        // public DbSet<AppRole> AppRoles { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
             modelBuilder.Entity<AppDanhGia>()
 				.HasOne(d => d.appKhachHang)
@@ -32,10 +41,6 @@ namespace CafeWorkspaceBooking.Models
 				.HasForeignKey(d => d.IdKhachHang)
 				.IsRequired()
 				.OnDelete(DeleteBehavior.Restrict);
-            modelBuilder.Entity<AppDanhGia>()
-				.HasOne(dp => dp.appDichVu)
-				.WithMany(dp => dp.appDanhGias)
-				.HasForeignKey(dp => dp.IdDichVu);
             modelBuilder.Entity<AppDanhGia>()
 				.HasOne(dp => dp.appPhong)
 				.WithMany(dp => dp.appDanhGias)
@@ -66,14 +71,28 @@ namespace CafeWorkspaceBooking.Models
 				.WithMany(dp => dp.appHuyDatPhongs)
 				.HasForeignKey(dp => dp.IdKhachHang);
 
-			modelBuilder.Entity<AppDVPhong>()
+            modelBuilder.Entity<AppDichVu>()
+				.HasOne(dp => dp.appDmDichVu)
+				.WithMany(dp => dp.appDichVus)
+				.HasForeignKey(dp => dp.IdDmDichVu);
+
+            modelBuilder.Entity<AppDatDV>()
 				.HasOne(dp => dp.appDichVus)
-				.WithMany(dp => dp.appDVPhongs)
+				.WithMany(dp => dp.appDatDVs)
 				.HasForeignKey(dp => dp.IdDichVu);
-            modelBuilder.Entity<AppDVPhong>()
-				.HasOne(dp => dp.appPhongs)
-				.WithMany(dp => dp.appDVPhongs)
-				.HasForeignKey(dp => dp.IdPhong);
+            modelBuilder.Entity<AppDatDV>()
+				.HasOne(dp => dp.appKhachHang)
+				.WithMany(dp => dp.appDatDVs)
+				.HasForeignKey(dp => dp.IdKhachHang);
+            modelBuilder.Entity<AppDatDV>()
+				.HasOne(dp => dp.appDatPhong)
+				.WithMany(dp => dp.appDatDV)
+				.HasForeignKey(dp => dp.IdDatPhong);
+            modelBuilder.Entity<AppDatDV>()
+				.HasOne(dp => dp.appHoaDon)
+			   .WithOne(hd => hd.appDatDV)
+			   .HasForeignKey<AppHoaDon>(hd => hd.IdDatDV);
+
 
 
             modelBuilder.Entity<AppHoaDon>()
@@ -84,6 +103,8 @@ namespace CafeWorkspaceBooking.Models
 				.HasOne(dp => dp.appkhachHang)
 				.WithMany(dp => dp.appHoaDon)
 				.HasForeignKey(dp => dp.IdKhachHang);
+
+
 
 
             modelBuilder.Entity<AppNhanVien>()
@@ -102,11 +123,59 @@ namespace CafeWorkspaceBooking.Models
 				.WithOne(dp => dp.appNhanVien)
 				.HasForeignKey< AppNhanVien>(dp => dp.IdKhachHang);
 
-    //        modelBuilder.Entity<AppTGDatPhong>()
-				//.HasOne(p => p.appPhong)
-				//.WithMany(dp => dp.appTGDatPhongs)
-				//.HasForeignKey(dp => dp.IdPhong);
+            modelBuilder.Entity<AppHuyDatDV>()
+				.HasOne(p => p.appDatDV)
+				.WithOne(dp => dp.appHuyDatDV)
+				.HasForeignKey<AppHuyDatDV>(dp => dp.IdDatDV);
+            //        modelBuilder.Entity<AppTGDatPhong>()
+            //.HasOne(p => p.appPhong)
+            //.WithMany(dp => dp.appTGDatPhongs)
+            //.HasForeignKey(dp => dp.IdPhong);
 
+
+
+
+            modelBuilder.Entity<AppThongBao>()
+                .HasOne(t => t.appPhong)
+				.WithMany(t => t.appThongBao)
+                .HasForeignKey(t => t.IdPhong)
+                .OnDelete(DeleteBehavior.NoAction); // Chỉ định NO ACTION
+
+
+            modelBuilder.Entity<AppThongBao>()
+				.HasOne(t => t.appDatPhong)
+				.WithMany(t => t.appThongBao)
+				.HasForeignKey(t => t.IdDatPhong)
+                .OnDelete(DeleteBehavior.NoAction); // Chỉ định NO ACTION
+
+            modelBuilder.Entity<AppThongBao>()
+				.HasOne(t => t.appHuyDatPhong)
+				.WithOne(t => t.appThongBao)
+				.HasForeignKey<AppThongBao>(t => t.IdHuyDatPhong)
+				.OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<AppThongBao>()
+				.HasOne(t => t.appKhachHang)
+				.WithMany(t => t.appThongBao)
+				.HasForeignKey(t => t.IdKhachHang);
+
+			modelBuilder.Entity<AppThongBao>()
+				.HasOne(t => t.appDanhGia)
+				.WithMany(t => t.appThongBao)
+				.HasForeignKey(t => t.IdDanhGia);
+
+            modelBuilder.Entity<AppThongBao>()
+				.HasOne(t => t.appHuyDatDV)
+                .WithOne(t => t.appThongBao)
+                .HasForeignKey<AppThongBao>(t => t.IdHuyDatDV)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            modelBuilder.Entity<AppImgDV>()
+				.HasOne(t => t.appDichVu)
+				.WithMany(t => t.appImgDV)
+				.HasForeignKey(t => t.IdDichVu)
+				.OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

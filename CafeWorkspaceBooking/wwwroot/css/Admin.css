@@ -58,3 +58,14 @@
             font-size: 18px;
         }
 }
+.setting:hover {
+    color: #b8842b;
+}
+.btn-outline-none {
+    outline: none;
+    /* Additional styling for the button can be added here */
+}
+
+
+
+/*rgb(128, 128, 128);*/

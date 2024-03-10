@@ -14,3 +14,32 @@
 		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 	</div>
 }
+@* @if (TempData.ContainsKey("SuccessMessage"))
+{
+	<script src="/lib/toastr.js/toastr.min.js"></script>
+	<script>
+		toastr.success('Thành công 1!', 'Thành công');
+		console.log('Thành công 1!');
+	</script>
+
+}
+
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+	<script>
+		toastr.error('@TempData["ErrorMessage"]', 'Lỗi');
+	</script>
+} *@
+<!-- JavaScript để hiển thị thông báo -->
+
+
+@{
+	if (ViewBag.NotificationType != null)
+	{
+		<script>
+			showNotification('@ViewBag.NotificationType', '@ViewBag.NotificationMessage');
+		</script>
+	}
+}
+
+<!-- Các phần khác của trang web ở đây -->

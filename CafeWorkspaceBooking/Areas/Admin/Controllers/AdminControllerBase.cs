@@ -19,23 +19,31 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
             _CafeDbContext = cafeDbContext;
             _mapper = mapper;
         }
-
 		public override void OnActionExecuting(ActionExecutingContext context)  // ham OnActionExecuting cho chay dau tien trong controller
 		{
-			var datphong = _CafeDbContext.appDatPhongs.ToList();
-			foreach (var dp in datphong)
-			{
-				if (dp.TGKetThuc < DateTime.Now && dp.TTDatPhong == TrangThaiDP.CHODUYET)  // qúa hạn dặt phòng 
-				{
-					dp.TTDatPhong = TrangThaiDP.QUA_HAN;
-				}
-				_CafeDbContext.Update(dp);
-				_CafeDbContext.SaveChanges();
-			}
+            var tb = _CafeDbContext.AppThongBaos
+                            .Where(i => i.CheckAll == false)
+                            .ToList();
+           
+            ViewData["CheckAll"] = tb.Count;   // Số lượng thông báo moiứ nhất 
+
+			var Tb = _CafeDbContext.AppThongBaos
+					.OrderByDescending(i => i.CreateAt)
+					.Take(15)
+					.ToList();
+			ViewBag.ThongBaoList = Tb;
+
 		}
+
+		
+
+
 		protected void SetSuccessMesg(string msg)
         {
-            TempData["_SuccessMesg"] = msg;
+            if(msg !=  null)
+            {
+				TempData["_SuccessMesg"] = msg;
+			}
         }
         protected void SetErrorMesg(string msg)
         {

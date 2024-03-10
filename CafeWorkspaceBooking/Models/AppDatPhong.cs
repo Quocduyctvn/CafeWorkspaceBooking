@@ -18,10 +18,11 @@ namespace CafeWorkspaceBooking.Models
 		public DateTime TGKetThuc { get; set; }
 		public double TongThoiLuong { get; set; }
 		public TrangThaiDP TTDatPhong { get; set; }    //Trạng thái đặt phòng - cài đặt giá trị Tĩnh : Bị hủy bởi chủ quán/Bị hủy bởi khách hàng/Đặt thành công/Chờ duyệt
+        public DateTime? TGCheckIn { get; set; }
+        public DateTime? TGCheckOut { get; set; }
 
-
-		 //======================================================================
-		public int IdPhong { get; set; }
+        //======================================================================
+        public int IdPhong { get; set; }
 		public AppPhong appPhong { get; set; }
 		//======================================================================
 
@@ -33,7 +34,9 @@ namespace CafeWorkspaceBooking.Models
         // public AppPhong appPhong  { get; set; }      // không có quan hệ Phòng - datphong Do Sinh ra bảng TGDatphong 
         public AppHuyDatPhong appHuyDatPhong { get; set; } //  1;1 
         public AppHoaDon appHoaDon { get; set; }            // 1:1 
-        // public AppTGDatPhong appTGDatPhong { get; set;}
+															// public AppTGDatPhong appTGDatPhong { get; set;}
 
+		public ICollection<AppThongBao> appThongBao { get; set; }
+        public ICollection<AppDatDV> appDatDV { get; set; } // 1 đặt phòng có thể k có dịch vụ nào
     }
 }

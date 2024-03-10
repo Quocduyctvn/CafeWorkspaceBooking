@@ -1,3 +1,65 @@
 Sửa Lỗi: 	Introducing FOREIGN KEY constraint 'FK_AppDanhGias_AppKhachHangs_appKhachHangIdKhachHang' on table 'AppDanhGias' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.
 		Could not create constraint or index. See previous errors.
 	=> thêm '?' ở thuộc tính khóa ngoại của bảng con  
+
+
+
+	xem chờ sd trên user (thêm nút hủy if hủy trong thời gian đã đặt thì đền tiền )
+
+
+
+
+
+
+
+
+
+
+
+
+	https://docs.google.com/document/d/1zwWO0mxBeD3UN4y-rX8NXTygk0iRJJ_EfGs_PqAc3gA/edit
+	https://youtu.be/rrYgosvb5DI?si=Fgysdt7TejysIYDR
+
+
+				// Lấy danh sách các danh mục dịch vụ với thông tin liên quan
+			var ps = _CafeDbContext.AppDmDichVus
+				.Include(i => i.appDichVus)
+					.ThenInclude(i => i.appDatDVs)
+						.ThenInclude(i => i.appHoaDon)
+				.ToList();
+
+			// Tạo một Dictionary để lưu trữ số lượng hóa đơn theo ngày trong tuần
+			var hoaDonTheoNgay = new Dictionary<DayOfWeek, int>();
+
+			// Khởi tạo giá trị mặc định cho Dictionary
+			foreach (DayOfWeek ngayTrongTuan in Enum.GetValues(typeof(DayOfWeek)))
+			{
+				hoaDonTheoNgay[ngayTrongTuan] = 0;
+			}
+
+			// Lặp qua từng danh mục dịch vụ
+			foreach (var p in ps)
+			{
+				// Lấy số lượng hóa đơn của danh mục dịch vụ
+				int soLuongHoaDon = p.appDichVus
+					.SelectMany(dv => dv.appDatDVs)
+					.Select(datDV => datDV.appHoaDon)
+					.Count();
+
+
+				// Lấy ngày trong tuần của hóa đơn và cập nhật giá trị trong Dictionary
+				foreach (var dv in p.appDichVus)
+				{
+					foreach (var datDV in dv.appDatDVs)
+					{
+							DayOfWeek ngayTrongTuan = datDV.appHoaDon.TGLapHD.DayOfWeek;
+							hoaDonTheoNgay[ngayTrongTuan] += 1; // Assuming each hoaDon contributes 1 to the count
+					}
+				}
+
+			}
+
+			// Convert Dictionary thành mảng để sử dụng trong biểu đồ hoặc nơi khác
+			var mangSoLuongHoaDonTheoNgay = hoaDonTheoNgay.Values.ToArray();
+
+            ViewBag.MangSoLuongHoaDonTheoNgay = mangSoLuongHoaDonTheoNgay;

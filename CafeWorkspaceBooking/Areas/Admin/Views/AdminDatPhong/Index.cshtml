@@ -1,152 +1,228 @@
 ﻿@using CafeWorkspaceBooking.WebConfig.Contants
 @model IEnumerable<CafeWorkspaceBooking.Areas.Admin.ViewModels.AdminDatPhongVM>
 
-
 @{
+	ViewData["Title"] = "CafeWorkspaceBooking";
 	int counter = 1;
 }
-<h3 class="text-center">Thông tin đặt phòng</h3>
+<style>
+	.f-childDetail {
+		border: double 3px rgb(231, 231, 231);
+	}
 
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>STT</th>
-			<th>Phòng</th>
-			<th>Tên khách Hàng</th>
-			<th>Thời Gian Nhận phòng</th>
-			<th>Thời gian Trả phòng</th>
-			<th>Trạng thái đặt phòng</th>
-			<th>Trạng thái Phòng</th>
-			<th></th>
+	.avt1 {
+		transition: transform 0.5s ease;
+	}
 
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in Model)
+		.avt1:hover {
+			box-shadow: 0px 0px 30px 1px rgba(10, 232, 198, 0.3);
+			transform: rotate(6deg);
+		}
+
+	.bg-custom {
+		background-image: url('/img/bg-01.png');
+		background-size: cover;
+		height: 100%; 
+		width: 100%;
+	}
+
+	.bg-custom-img {
+		background-image: url('/img/bg-01-img.png');
+		background-size: cover;
+		height: 100%; 
+	}
+</style>
+<div class="">
+	<div class="row container-xl  mx-auto">
+		<h3 class="text-center my-5">Thông tin đặt phòng</h3>
+
+		<div class="row ">
+			<form class="d-flex" asp-action="Index">
+				<div class="col-sm-3 mb-2">
+					<select asp-items="ViewBag.Phong" name="phong" class="form-select fs-4 w-100 m-2" style="border-radius: 5px;">
+						<option value="" class="fs-5">-- Chọn Phòng --</option>
+					</select>
+				</div>
+				<div class="col-sm-3 mb-2">
+					<div class="form-group w-100 m-2">
+						<input type="date" name="datetime" class="form-control w-100" style="border-radius: 5px;" />
+					</div>
+				</div>
+
+				<div class="col-sm-6 m-2">
+					<div class="row g-2 align-items-center">
+						<div class="col-8">
+							<input type="search" name="keyword" class="form-control" id="example" placeholder="Nhập từ khóa..">
+						</div>
+						<div class="col-4">
+							<button type="submit" class="btn btn-info w-100">
+								Lưu bộ lọc
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		@if (ViewBag?.searched != null)
 		{
-			<tr>
-				<td>@counter</td>
-				<td>@item.TenPhong</td>
-				<td>@item.TenKhachHang</td>
-				<td>@item.TGBatDau</td>
-				<td>@item.TGKetThuc</td>
-				<td>@item.TrangThaiDP</td>
-				<td>
-					@if (item.TrangThaiPhong == TrangThaiPhong.TRUNG)
-					{
-						<i class="fas fa-exclamation-triangle" style="color: #f5cc38;"></i> <span class="text-warning"> Trùng Phòng</span>
-					}
-					else if (item.TrangThaiPhong == TrangThaiPhong.TRONG)
-					{
-						<i class="fas fa-plus-circle" style="color: #25b636;"></i><span class="text-success"> Phòng trống</span>
-					}
-					else if(item.TrangThaiPhong == TrangThaiPhong.CHO_THANHTOAN)
-					{
-						<i class="fas fa-check-circle" style="color: #40c45a;"></i> <span class="text-success"> Đang Sử dụng </span>
-					}
-					else if (item.TrangThaiPhong == TrangThaiPhong.THANHTOAN)
-					{
-						<i class="fas fa-check-circle" style="color: #40c45a;"></i> <span class="text-success">Hết Giờ</span>
-					} else
-					{
-						<i class="fas fa-check-circle" style="color: #40c45a;"></i> <span class="text-success"> Đã Đặt </span>
-					}
+			<h4> Kết qủa tìm kiếm: @Model.Count() đơn đặt phòng</h4>
+		}
+		<div class="mt-3 mb-5" style="border-bottom: 2px solid rgb(0,0,0);"></div>
 
-				</td>
-				<td>
-					@if (item.TrangThaiDP != TrangThaiDP.DADUYET)  // chờ duyệt || Huy  || quá hạn 
-					{
-						if (item.TrangThaiDP == TrangThaiDP.QUA_HAN)
-						{
-							<button type="button" class="btn btn-primary" disabled>
-								Quá hạn duyệt 
-							</button>
-						}
-						else
-						{
-							if (item.TrangThaiDP != TrangThaiDP.KHACH_HUY && item.TrangThaiDP != TrangThaiDP.ADMIN_HUY)
-							{
-								<button class="btn btn-success">
-									<a asp-action="Duyet" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong">Duyệt</a>
-								</button>
-							}
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal@(item.IdDatPhong)" @(item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY ? "disabled" : "")>
-								@(item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY ? "Đã hủy" : "Hủy")
-							</button>
-						}
-					}
-					else																//đã duyệt
-					{
-						@if (DateTime.Now.Date == item.TGBatDau.Date )					// check cùng ngày
-						{
-							if (item.TGBatDau > DateTime.Now)
-							{
-								<button class="btn btn-success">
-									<a asp-action="" asp-controller="" asp-route-id="@item.IdDatPhong">Nhận Phòng</a>
-								</button>
-							}else{
-								if (item.TrangThaiPhong == TrangThaiPhong.DA_THANHTOAN)     // đã Sử dụng còn trong ngày
+		<table class="table table-striped">
+			<thead>
+				<tr class="text-center">
+					<th>STT</th>
+					<th>Phòng</th>
+					<th>Tên khách Hàng</th>
+					@* <th>Ngày </th> *@
+					<th>Thời gian</th>
+					@* <th>Trạng thái đặt phòng</th> *@
+					<th>Trạng thái Phòng</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{   //<form asp-action="">
+
+					@* </form>
+				<button class="btn btn-success">
+				<a asp-action="CheckOut" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong">Check Out </a>
+				</button> *@
+					<tr>
+						<td>@counter</td>
+						<td>@item.TenPhong</td>
+						<td>@item.TenKhachHang</td>
+						<td>
+								@item.TGBatDau.TimeOfDay.Hours.ToString("00"):@item.TGBatDau.TimeOfDay.Minutes.ToString("00")  -  @item.TGKetThuc.TimeOfDay.Hours.ToString("00"):@item.TGKetThuc.TimeOfDay.Minutes.ToString("00") | @item.TGBatDau.ToString("dd/MM/yyyy")
+						</td>
+							@* <td>@item.TGBatDau.TimeOfDay.Hours.ToString("00"):@item.TGBatDau.TimeOfDay.Minutes.ToString("00")  -  @item.TGKetThuc.TimeOfDay.Hours.ToString("00"):@item.TGKetThuc.TimeOfDay.Minutes.ToString("00")</td>
+					*@@* <td>@item.TrangThaiDP</td> *@
+						<td>
+								@if (item.TrangThaiPhong == TrangThaiPhong.TRUNG)
 								{
-									<button class="btn btn-success">
-										<a href="#">Đã sử dụng 1</a>
-									</button>
+								<i class="fas fa-exclamation-triangle" style="color: #f5cc38;"></i> <span class="text-warning"> Trùng Phòng</span>
+								}
+								else if (item.TrangThaiPhong == TrangThaiPhong.TRONG)
+								{
+								<i class="fas fa-plus-circle" style="color: #25b636;"></i>
+
+								<span class="text-success"> Phòng trống</span>
+								}
+								else if (item.TGKetThuc >= DateTime.Now && item.TrangThaiPhong == TrangThaiPhong.DANG_SUDUNG)
+								{
+								<i class="fas fa-check-circle" style="color: #40c45a;"></i> <span class="text-success"> Đang Sử dụng </span>
+								}
+								else if (item.TGKetThuc <= DateTime.Now && item.TrangThaiPhong == TrangThaiPhong.DANG_SUDUNG)
+								{
+								<i class="fas fa-check-circle" style="color: #40c45a;"></i> <span class="text-success">Hết Giờ</span>
+								}
+								else if (item.TrangThaiPhong == TrangThaiPhong.DADAT)
+								{
+								<i class="fas fa-check-circle" style="color: #40c45a;"></i> <span class="text-success"> Đã Đặt </span>
 								}
 								else
 								{
-									<button class="btn btn-success">
-										<a asp-action="ThanhToan" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong">Thanh Toán 2</a>
-									</button>
+								<i class="fas fa-check-circle" style="color: #40c45a;"></i> <span class="text-success"> Đã sử dụng </span>
 								}
-							}
-							
-						}
-						else if (DateTime.Now.Date < item.TGBatDau.Date)				// đã duyệt nhưng ch tới ngày
-						{
-							<button class="btn btn-success">
-								<a href="#">Chưa tới ngày</a>
-							</button>
-						}
-						else                                                            // đã Sử dụng khi qua ngày 
-						{
-							if (item.TrangThaiPhong == TrangThaiPhong.DA_THANHTOAN)     // đã Sử dụng còn trong ngày
-							{
-								<button class="btn btn-success">
-									<a href="#">Đã sử dụng </a>
+
+
+						</td>
+						<td class="text-end">
+								@if (item.TrangThaiDP == TrangThaiDP.QUA_HAN)
+								{
+								<button type="button" class="btn btn-primary" disabled>
+									Quá hạn duyệt
 								</button>
-							}
-							else
-							{
-								<button class="btn btn-success">
-									<a asp-action="ThanhToan" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong">Thanh Toán 1</a>
+								}
+								else if (item.TrangThaiDP == TrangThaiDP.CHODUYET || item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY)
+								{
+									if (item.TrangThaiDP == TrangThaiDP.CHODUYET)
+									{
+									<button class="btn btn-success">
+										<a asp-action="Duyet" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong">Duyệt</a>
+									</button>
+									}
+								<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal@(item.IdDatPhong)" @(item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY ? "disabled" : "")>
+										@(item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY ? "Đã hủy" : "Hủy")
 								</button>
-							}
-						}
-					}
-					<div class="modal fade" id="exampleModal@(item.IdDatPhong)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<form asp-action="HuyDatPhong" asp-controller="AdminDatPhong" asp-area="Admin" class="p-5">
-									<h4>Lí do Hủy đặt phòng: </h4>
-									<div class="input-group flex-nowrap">
-										<input type="hidden" name="id" value="@item.IdDatPhong" />
-										<input type="text" class="form-control" name="lido" placeholder="Lí do..." aria-label="Lí do..." aria-describedby="addon-wrapping">
+
+								}
+								else if (DateTime.Now.Date == item.TGBatDau.Date)                   // check cùng ngày
+								{
+									if (item.TGBatDau > DateTime.Now && item.TrangThaiDP == TrangThaiDP.DADUYET)   // cùng ngày nhưng ch tới h >> Chưa tới h
+									{
+									<button class="btn btn-success">
+										<a asp-action="#" asp-controller="#" disabled>Chưa tới giờ</a>
+									</button>
+									}
+									if (item.TGBatDau < DateTime.Now && item.TGKetThuc > DateTime.Now && item.TrangThaiDP == TrangThaiDP.DADUYET)   // trong khoảng tg đặt phòng >> check in
+									{
+									<button class="btn btn-success">
+										<a asp-action="CheckIn" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong">Check In</a>
+									</button>
+									}
+									if (item.TrangThaiDP == TrangThaiDP.CHECKIN)                    // đang sử dụng
+									{
+									<button class="btn btn-success">
+										<a asp-action="CheckOut" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong">Check Out </a>
+									</button>
+									}
+									if (item.TrangThaiDP == TrangThaiDP.CHECKOUT)                   // đã thanh toán
+									{
+									<button class="btn btn-success">
+										<a asp-action="#" asp-controller="#" disabled>Đã sử dụng 1</a>
+									</button>
+									}
+								}
+								else if (DateTime.Now.Date < item.TGBatDau.Date)                // đã duyệt nhưng ch tới ngày
+								{
+								<button class="btn btn-success">
+									<a asp-action="#" asp-controller="#" disabled>Chưa tới ngày</a>
+								</button>
+								}
+								else                                                            // đã Sử dụng khi qua ngày
+								{
+
+								<button class="btn btn-success disabled">
+									Đã sử dụng
+								</button>
+
+								}
+
+							<div class="modal fade" id="exampleModal@(item.IdDatPhong)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<form asp-action="HuyDatPhong" asp-controller="AdminDatPhong" asp-area="Admin" class="p-5">
+											<h4>Lí do Hủy đặt phòng: </h4>
+											<div class="input-group flex-nowrap">
+												<input type="hidden" name="id" value="@item.IdDatPhong" />
+												<input type="text" class="form-control" name="lido" placeholder="Lí do..." aria-label="Lí do..." aria-describedby="addon-wrapping">
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+												<button type="Submit" class="btn btn-primary">Xác nhận hủy đặt Phòng</button>
+											</div>
+										</form>
 									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-										<button type="Submit" class="btn btn-primary">Xác nhận hủy đặt Phòng</button>
-									</div>
-								</form>
+								</div>
 							</div>
-						</div>
-					</div>
-				</td>
-				@* <td><a asp-action="HuyDatPhong" asp-controller="HuyDatPhong" asp-route-id="@item.IdDatPhong" confirm("are you sre")>@(item.TTDatPhong == TrangThaiDP.KHACH_HUY || item.TTDatPhong == TrangThaiDP.ADMIN_HUY ? "Đã hủy" : "Hủy đơn đặt")</a></td> *@
-			</tr>
+						</td>
 
-			counter++;
-		}
+						<td style="" tip="Thiết lặp">
+							<a asp-action="ChiTietDP" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong"> <i class="fas fa-cog h4 setting"></i></a>
+						</td>
 
 
+						@* <td><a asp-action="ChiTietDP" asp-controller="AdminDatPhong" asp-route-id="@item.IdDatPhong" confirm("are you sre")>@(item.TTDatPhong == TrangThaiDP.KHACH_HUY || item.TTDatPhong == TrangThaiDP.ADMIN_HUY ? "Đã hủy" : "Hủy đơn đặt")</a></td> *@
+					</tr>
+					counter++;
+				}
 
-	</tbody>
-</table>
+
+			</tbody>
+		</table>
+	</div>
+</div>

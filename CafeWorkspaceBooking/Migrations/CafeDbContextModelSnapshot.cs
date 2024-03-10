@@ -22,29 +22,6 @@ namespace CafeWorkspaceBooking.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDVPhong", b =>
-                {
-                    b.Property<int>("IdDVPhong")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDVPhong"));
-
-                    b.Property<int>("IdDichVu")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdPhong")
-                        .HasColumnType("int");
-
-                    b.HasKey("IdDVPhong");
-
-                    b.HasIndex("IdDichVu");
-
-                    b.HasIndex("IdPhong");
-
-                    b.ToTable("AppDVPhongs");
-                });
-
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDanhGia", b =>
                 {
                     b.Property<int>("IdDanhGia")
@@ -76,13 +53,57 @@ namespace CafeWorkspaceBooking.Migrations
 
                     b.HasKey("IdDanhGia");
 
-                    b.HasIndex("IdDichVu");
-
                     b.HasIndex("IdKhachHang");
 
                     b.HasIndex("IdPhong");
 
                     b.ToTable("AppDanhGias");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDatDV", b =>
+                {
+                    b.Property<int>("IdDatDV")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDatDV"));
+
+                    b.Property<int>("IdDatPhong")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdDichVu")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdKhachHang")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Size")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("TGDatOnline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("TGNhan")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TT_DatDV")
+                        .HasColumnType("int");
+
+                    b.Property<double>("TongTien")
+                        .HasColumnType("float");
+
+                    b.HasKey("IdDatDV");
+
+                    b.HasIndex("IdDatPhong");
+
+                    b.HasIndex("IdDichVu");
+
+                    b.HasIndex("IdKhachHang");
+
+                    b.ToTable("AppDatDVs");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDatPhong", b =>
@@ -103,6 +124,12 @@ namespace CafeWorkspaceBooking.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("TGBatDau")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("TGCheckIn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("TGCheckOut")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("TGDatOnline")
@@ -137,7 +164,17 @@ namespace CafeWorkspaceBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDichVu"));
 
-                    b.Property<string>("LoaiDV")
+                    b.Property<double>("Gia")
+                        .HasColumnType("float");
+
+                    b.Property<int>("IdDmDichVu")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mota")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -145,9 +182,32 @@ namespace CafeWorkspaceBooking.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ThanhPhan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("IdDichVu");
 
+                    b.HasIndex("IdDmDichVu");
+
                     b.ToTable("appDichVus");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDmDichVu", b =>
+                {
+                    b.Property<int>("IdDmDichVu")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdDmDichVu"));
+
+                    b.Property<string>("TenDmDv")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdDmDichVu");
+
+                    b.ToTable("AppDmDichVus");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppHoaDon", b =>
@@ -157,6 +217,9 @@ namespace CafeWorkspaceBooking.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdHoaDon"));
+
+                    b.Property<int?>("IdDatDV")
+                        .HasColumnType("int");
 
                     b.Property<int>("IdDatPhong")
                         .HasColumnType("int");
@@ -175,6 +238,10 @@ namespace CafeWorkspaceBooking.Migrations
 
                     b.HasKey("IdHoaDon");
 
+                    b.HasIndex("IdDatDV")
+                        .IsUnique()
+                        .HasFilter("[IdDatDV] IS NOT NULL");
+
                     b.HasIndex("IdDatPhong")
                         .IsUnique();
 
@@ -183,6 +250,32 @@ namespace CafeWorkspaceBooking.Migrations
                     b.HasIndex("IdNhanVien");
 
                     b.ToTable("AppHoaDons");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppHuyDatDV", b =>
+                {
+                    b.Property<int>("IdHuyDatDV")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdHuyDatDV"));
+
+                    b.Property<int>("IdDatDV")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LiDoHuy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("TGHuy")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("IdHuyDatDV");
+
+                    b.HasIndex("IdDatDV")
+                        .IsUnique();
+
+                    b.ToTable("AppHuyDatDV");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppHuyDatPhong", b =>
@@ -214,6 +307,28 @@ namespace CafeWorkspaceBooking.Migrations
                     b.HasIndex("IdKhachHang");
 
                     b.ToTable("AppHuyDatPhongs");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppImgDV", b =>
+                {
+                    b.Property<int>("IdImgDV")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdImgDV"));
+
+                    b.Property<int>("IdDichVu")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdImgDV");
+
+                    b.HasIndex("IdDichVu");
+
+                    b.ToTable("AppImgDV");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppImgPhong", b =>
@@ -348,33 +463,72 @@ namespace CafeWorkspaceBooking.Migrations
                     b.ToTable("AppPhongs");
                 });
 
-            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDVPhong", b =>
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppThongBao", b =>
                 {
-                    b.HasOne("CafeWorkspaceBooking.Models.AppDichVu", "appDichVus")
-                        .WithMany("appDVPhongs")
-                        .HasForeignKey("IdDichVu")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasOne("CafeWorkspaceBooking.Models.AppPhong", "appPhongs")
-                        .WithMany("appDVPhongs")
-                        .HasForeignKey("IdPhong")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Navigation("appDichVus");
+                    b.Property<bool>("CheckAll")
+                        .HasColumnType("bit");
 
-                    b.Navigation("appPhongs");
+                    b.Property<bool>("Checked")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("CreateAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("IdDanhGia")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdDatPhong")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdHuyDatDV")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdHuyDatPhong")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdKhachHang")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdPhong")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NDThongbao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TenThongBao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdDanhGia");
+
+                    b.HasIndex("IdDatPhong");
+
+                    b.HasIndex("IdHuyDatDV")
+                        .IsUnique()
+                        .HasFilter("[IdHuyDatDV] IS NOT NULL");
+
+                    b.HasIndex("IdHuyDatPhong")
+                        .IsUnique()
+                        .HasFilter("[IdHuyDatPhong] IS NOT NULL");
+
+                    b.HasIndex("IdKhachHang");
+
+                    b.HasIndex("IdPhong");
+
+                    b.ToTable("AppThongBaos");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDanhGia", b =>
                 {
-                    b.HasOne("CafeWorkspaceBooking.Models.AppDichVu", "appDichVu")
-                        .WithMany("appDanhGias")
-                        .HasForeignKey("IdDichVu")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("CafeWorkspaceBooking.Models.AppKhachHang", "appKhachHang")
                         .WithMany("appDanhGias")
                         .HasForeignKey("IdKhachHang")
@@ -387,11 +541,36 @@ namespace CafeWorkspaceBooking.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("appDichVu");
-
                     b.Navigation("appKhachHang");
 
                     b.Navigation("appPhong");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDatDV", b =>
+                {
+                    b.HasOne("CafeWorkspaceBooking.Models.AppDatPhong", "appDatPhong")
+                        .WithMany("appDatDV")
+                        .HasForeignKey("IdDatPhong")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CafeWorkspaceBooking.Models.AppDichVu", "appDichVus")
+                        .WithMany("appDatDVs")
+                        .HasForeignKey("IdDichVu")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CafeWorkspaceBooking.Models.AppKhachHang", "appKhachHang")
+                        .WithMany("appDatDVs")
+                        .HasForeignKey("IdKhachHang")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("appDatPhong");
+
+                    b.Navigation("appDichVus");
+
+                    b.Navigation("appKhachHang");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDatPhong", b =>
@@ -413,8 +592,23 @@ namespace CafeWorkspaceBooking.Migrations
                     b.Navigation("appPhong");
                 });
 
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDichVu", b =>
+                {
+                    b.HasOne("CafeWorkspaceBooking.Models.AppDmDichVu", "appDmDichVu")
+                        .WithMany("appDichVus")
+                        .HasForeignKey("IdDmDichVu")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("appDmDichVu");
+                });
+
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppHoaDon", b =>
                 {
+                    b.HasOne("CafeWorkspaceBooking.Models.AppDatDV", "appDatDV")
+                        .WithOne("appHoaDon")
+                        .HasForeignKey("CafeWorkspaceBooking.Models.AppHoaDon", "IdDatDV");
+
                     b.HasOne("CafeWorkspaceBooking.Models.AppDatPhong", "appDatPhong")
                         .WithOne("appHoaDon")
                         .HasForeignKey("CafeWorkspaceBooking.Models.AppHoaDon", "IdDatPhong")
@@ -433,11 +627,24 @@ namespace CafeWorkspaceBooking.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("appDatDV");
+
                     b.Navigation("appDatPhong");
 
                     b.Navigation("appNhanVien");
 
                     b.Navigation("appkhachHang");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppHuyDatDV", b =>
+                {
+                    b.HasOne("CafeWorkspaceBooking.Models.AppDatDV", "appDatDV")
+                        .WithOne("appHuyDatDV")
+                        .HasForeignKey("CafeWorkspaceBooking.Models.AppHuyDatDV", "IdDatDV")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("appDatDV");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppHuyDatPhong", b =>
@@ -457,6 +664,17 @@ namespace CafeWorkspaceBooking.Migrations
                     b.Navigation("appDatPhong");
 
                     b.Navigation("appKhachHang");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppImgDV", b =>
+                {
+                    b.HasOne("CafeWorkspaceBooking.Models.AppDichVu", "appDichVu")
+                        .WithMany("appImgDV")
+                        .HasForeignKey("IdDichVu")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("appDichVu");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppImgPhong", b =>
@@ -479,25 +697,102 @@ namespace CafeWorkspaceBooking.Migrations
                     b.Navigation("appKhachHang");
                 });
 
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppThongBao", b =>
+                {
+                    b.HasOne("CafeWorkspaceBooking.Models.AppDanhGia", "appDanhGia")
+                        .WithMany("appThongBao")
+                        .HasForeignKey("IdDanhGia");
+
+                    b.HasOne("CafeWorkspaceBooking.Models.AppDatPhong", "appDatPhong")
+                        .WithMany("appThongBao")
+                        .HasForeignKey("IdDatPhong")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.HasOne("CafeWorkspaceBooking.Models.AppHuyDatDV", "appHuyDatDV")
+                        .WithOne("appThongBao")
+                        .HasForeignKey("CafeWorkspaceBooking.Models.AppThongBao", "IdHuyDatDV")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("CafeWorkspaceBooking.Models.AppHuyDatPhong", "appHuyDatPhong")
+                        .WithOne("appThongBao")
+                        .HasForeignKey("CafeWorkspaceBooking.Models.AppThongBao", "IdHuyDatPhong")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("CafeWorkspaceBooking.Models.AppKhachHang", "appKhachHang")
+                        .WithMany("appThongBao")
+                        .HasForeignKey("IdKhachHang");
+
+                    b.HasOne("CafeWorkspaceBooking.Models.AppPhong", "appPhong")
+                        .WithMany("appThongBao")
+                        .HasForeignKey("IdPhong")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("appDanhGia");
+
+                    b.Navigation("appDatPhong");
+
+                    b.Navigation("appHuyDatDV");
+
+                    b.Navigation("appHuyDatPhong");
+
+                    b.Navigation("appKhachHang");
+
+                    b.Navigation("appPhong");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDanhGia", b =>
+                {
+                    b.Navigation("appThongBao");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDatDV", b =>
+                {
+                    b.Navigation("appHoaDon");
+
+                    b.Navigation("appHuyDatDV")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDatPhong", b =>
                 {
+                    b.Navigation("appDatDV");
+
                     b.Navigation("appHoaDon")
                         .IsRequired();
 
                     b.Navigation("appHuyDatPhong")
                         .IsRequired();
+
+                    b.Navigation("appThongBao");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDichVu", b =>
                 {
-                    b.Navigation("appDVPhongs");
+                    b.Navigation("appDatDVs");
 
-                    b.Navigation("appDanhGias");
+                    b.Navigation("appImgDV");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppDmDichVu", b =>
+                {
+                    b.Navigation("appDichVus");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppHuyDatDV", b =>
+                {
+                    b.Navigation("appThongBao");
+                });
+
+            modelBuilder.Entity("CafeWorkspaceBooking.Models.AppHuyDatPhong", b =>
+                {
+                    b.Navigation("appThongBao");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppKhachHang", b =>
                 {
                     b.Navigation("appDanhGias");
+
+                    b.Navigation("appDatDVs");
 
                     b.Navigation("appDatPhongs");
 
@@ -506,6 +801,8 @@ namespace CafeWorkspaceBooking.Migrations
                     b.Navigation("appHuyDatPhongs");
 
                     b.Navigation("appNhanVien");
+
+                    b.Navigation("appThongBao");
                 });
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppNhanVien", b =>
@@ -515,13 +812,13 @@ namespace CafeWorkspaceBooking.Migrations
 
             modelBuilder.Entity("CafeWorkspaceBooking.Models.AppPhong", b =>
                 {
-                    b.Navigation("appDVPhongs");
-
                     b.Navigation("appDanhGias");
 
                     b.Navigation("appDatPhongs");
 
                     b.Navigation("appImgPhongs");
+
+                    b.Navigation("appThongBao");
                 });
 #pragma warning restore 612, 618
         }

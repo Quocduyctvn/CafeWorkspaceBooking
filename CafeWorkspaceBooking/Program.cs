@@ -66,7 +66,7 @@ app.UseAuthorization();
 
 //Thêm rounter cho admin
 app.MapAreaControllerRoute(
-  name: "Azdmin",
+  name: "Admin",
   areaName: "Admin",
   pattern: "Admin/{controller=AdminHome}/{action=Index}/{id?}"
 );

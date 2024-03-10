@@ -94,6 +94,8 @@ namespace CafeWorkspaceBooking.Controllers
 				TGBatDau = datphongVM.TGBatDau,
 				TGKetThuc = datphongVM.TGKetThuc,
 				TGDatOnline = DateTime.Now,
+				TGCheckIn = null,
+				TGCheckOut = null,
 				TongThoiLuong = tonggio,
 				TTDatPhong = TrangThaiDP.CHODUYET,
 				IdPhong = phong.IdPhong,
@@ -101,8 +103,37 @@ namespace CafeWorkspaceBooking.Controllers
 			};
 
 			_CafeDbContext.Add(dp);
-			_CafeDbContext.SaveChanges();
-			return RedirectToAction("Index", "Home");
+            int success = _CafeDbContext.SaveChanges();					// giá trị trả về của _CafeDbContext.SaveChanges();	 là sl record đc lưu 
+            if (success > 0)
+            {
+                var DP = _CafeDbContext.appDatPhongs
+                                    .Where(i => i.TGBatDau == dp.TGBatDau && i.TGKetThuc == dp.TGKetThuc)
+                                    .FirstOrDefault();
+                var Tbao = new AppThongBao();                           // lưu bảng thông báo
+                Tbao.TenThongBao = "Đặt phòng";
+                Tbao.NDThongbao = $"Khách hàng {_kh.HoTen} đã đặt phòng vào lúc {dp.TGBatDau}";
+                Tbao.CreateAt = DateTime.Now;
+                Tbao.Checked = false;
+                Tbao.CheckAll = false;
+
+                Tbao.IdDanhGia = null;
+                Tbao.IdDatPhong = DP.IdDatPhong;
+				Tbao.IdHuyDatPhong = null;
+                Tbao.IdKhachHang = userId;
+				Tbao.IdPhong = dp.IdPhong;
+
+
+                _CafeDbContext.Add(Tbao);
+                _CafeDbContext.SaveChanges();
+
+                SetSuccessMesg("Đặt phòng thành công - Cảm ơn quý khách");
+            }
+            else
+            {
+
+                SetErrorMesg("Đặt phòng KHÔNg thành công");
+            }
+            return RedirectToAction("Index", "Home");
 		}
 
 		public IActionResult DetailOfBooking(DateTime? datetime, string keyword, string phong)
@@ -166,7 +197,7 @@ namespace CafeWorkspaceBooking.Controllers
 				DP.TGKetThuc = item.TGKetThuc;
 				DP.TrangThaiDP = item.TTDatPhong;
 				///DP.TrangThaiPhong = ;
-				var hasTimeOverlap = _CafeDbContext.appDatPhongs
+				var check_Trung = _CafeDbContext.appDatPhongs
 					.Include(p => p.appPhong)
 					.Include(i => i.appKhachHang)
 					.Any(otherCustomer =>
@@ -175,38 +206,22 @@ namespace CafeWorkspaceBooking.Controllers
 						(item.TGKetThuc > otherCustomer.TGBatDau && item.TGKetThuc < otherCustomer.TGKetThuc)) &&
 						item.TTDatPhong == otherCustomer.TTDatPhong
 					);
-				if (hasTimeOverlap)
+				if (check_Trung)
 				{
 					DP.TrangThaiPhong = TrangThaiPhong.TRUNG;
 				}
-				else if (item.TTDatPhong == TrangThaiDP.DADUYET)
+
+				if (item.TTDatPhong == TrangThaiDP.DADUYET)                                     // chờ  sử dụng 
 				{
 					DP.TrangThaiPhong = TrangThaiPhong.DADAT;
 				}
-				else
+				if (item.TTDatPhong == TrangThaiDP.CHECKIN)                                     // đang sử dụng 
 				{
-					DP.TrangThaiPhong = TrangThaiPhong.TRONG;
+					DP.TrangThaiPhong = TrangThaiPhong.DANG_SUDUNG;
 				}
-
-
-				if (item.TGBatDau <= DateTime.Now && item.TTDatPhong == TrangThaiDP.DADUYET)     // Đang sử Dụng 
+				if (item.TTDatPhong == TrangThaiDP.CHECKOUT)                                     // đã sử dụng 
 				{
-					if (item.TGKetThuc >= DateTime.Now)                                         // trong TG  sử dụng 
-					{
-						DP.TrangThaiPhong = TrangThaiPhong.CHO_THANHTOAN;
-					}
-					else                                                                        // hết giờ
-					{
-						DP.TrangThaiPhong = TrangThaiPhong.THANHTOAN;
-					}
-					if (item.appHoaDon != null)   // khi thanh  toán xong thì dữ liệu vào bảng Hóa Đơn
-					{
-						DP.TrangThaiPhong = TrangThaiPhong.DA_THANHTOAN;
-					}
-				}
-				if (item.TGBatDau.Day != DateTime.Now.Day && item.TTDatPhong == TrangThaiDP.DADUYET)        // đặt r nhưng ch tới ngày  
-				{
-					DP.TrangThaiPhong = TrangThaiPhong.CHO_SUDUNG;
+					DP.TrangThaiPhong = TrangThaiPhong.DA_SUDUNG;
 				}
 				datphong.Add(DP);
 			}

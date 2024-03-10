@@ -21,6 +21,8 @@ namespace CafeWorkspaceBooking.Models
         //[ForeignKey("IdDanhGia")]
         public AppKhachHang appKhachHang { get; set; }
         public AppPhong appPhong { get; set; }
-        public AppDichVu appDichVu { get; set; }
-    }
+
+
+		public ICollection<AppThongBao> appThongBao { get; set; }
+	}
 }

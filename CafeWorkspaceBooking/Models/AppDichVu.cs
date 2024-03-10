@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CafeWorkspaceBooking.WebConfig.Contants;
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 namespace CafeWorkspaceBooking.Models
 {
@@ -6,12 +9,18 @@ namespace CafeWorkspaceBooking.Models
     {
         [Key]
         public int  IdDichVu { get; set; }
-        public string TenDv { get; set; }   // Nước(phí) - màn Hình(free) - Quạt (free)
-        public string LoaiDV { get; set; }  // lưu trữ giá trị "free" hoặc "lấy phí"
+        public string TenDv { get; set; }               // Bạc xĩu - cafe đá - liton - trà Chanh 
+        public double Gia { get; set; }
+        public string ImageUrl {  get; set; }   
+        public string ThanhPhan {  get; set; }
+        public string Mota { get; set; }
 
 
-        public ICollection<AppDVPhong> appDVPhongs { get; set; }   // 1 dicch vu  có nhìu DICH VU PHONG 
-        public ICollection<AppDanhGia> appDanhGias { get; set; }   // 1 dicch vu  có nhìu DICH VU PHONG 
+
+        public ICollection<AppDatDV> appDatDVs { get; set; }   // 1 dicch vu  có nhìu DICH VU PHONG 
+        public int IdDmDichVu { get; set; }
+        public AppDmDichVu appDmDichVu { get; set; }
+        public ICollection<AppImgDV> appImgDV { get; set; }   // 1 dicch vu  có nhìu Image DICH VU
 
     }
 }

@@ -58,57 +58,47 @@
 				<td>@item.TGKetThuc</td>
 				<td>@item.TrangThaiDP</td>
 				<td>
-					@if (item.TrangThaiDP != TrangThaiDP.DADUYET)  // chờ duyệt
+					@if (item.TrangThaiDP == TrangThaiDP.QUA_HAN)
 					{
-						if(item.TrangThaiDP == TrangThaiDP.QUA_HAN)
-						{
-							<button type="button" class="btn btn-primary" disabled>
-								Quá hạn duyệt 
-							</button>
-						}else{
-							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" @(item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY ? "disabled" : "")>
-								@(item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY ? "Đã hủy" : "Hủy")
-							</button>
-						}
+						<button type="button" class="btn btn-primary" disabled>
+							Quá hạn duyệt
+						</button>
 					}
-					else                                                                //đã duyệt
+					else if (item.TrangThaiDP == TrangThaiDP.CHODUYET || item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY)
 					{
-						@if (DateTime.Now.Date == item.TGBatDau.Date)                   // check cùng ngày
-						{
-							if (item.TGBatDau <= DateTime.Now)                              // nhận phòng trễ
-							{
-								if (item.TrangThaiPhong == TrangThaiPhong.DA_THANHTOAN)     // đã Sử dụng còn trong ngày
-								{
-									<button class="btn btn-success">
-										<a href="#">Đã sử dụng </a>
-									</button>
-								}
-								else                                                    // đã duyệt nhưng đang sd
-								{
-									<button class="btn btn-success">
-										<a href="#">Đang sử dụng</a>
-									</button>
-								}
-							}
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" @(item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY ? "disabled" : "")>
+							@(item.TrangThaiDP == TrangThaiDP.KHACH_HUY || item.TrangThaiDP == TrangThaiDP.ADMIN_HUY ? "Đã hủy" : "Hủy")
+						</button>
 
-						}
-						else if (DateTime.Now.Date < item.TGBatDau.Date)                // đã duyệt nhưng ch tới ngày
-						{
-							<button class="btn btn-success">
-								<a href="#">Chưa tới ngày</a>
-							</button>
-						}
-						else                                                            // đã Sử dụng khi qua ngày
-						{
-							<button class="btn btn-success">
-								<a href="#">Đã sử dụng</a>
-							</button>
-						}
+					}
+					else if (DateTime.Now.Date < item.TGBatDau.Date)                // đã duyệt nhưng ch tới ngày
+					{
+						<button class="btn btn-success">
+							<a asp-action="#" asp-controller="#" disabled>Chưa tới ngày</a>
+						</button>
+					}
+					@if (item.TrangThaiDP == TrangThaiDP.CHECKIN)                                                           // đang Sử dụng khi qua ngày
+					{
+						<button class="btn btn-success">
+							<a href="#" disabled>đang sử dụng </a>
+						</button>
+					}
+					@if (item.TrangThaiDP == TrangThaiDP.CHECKOUT)                                                           // đã Sử dụng khi qua ngày
+					{
+						<button class="btn btn-success">
+							<a href="#" disabled>Đã sử dụng </a>
+						</button>
+					}
+					@if (item.TrangThaiDP == TrangThaiDP.DADUYET)                                                           // đã Sử dụng khi qua ngày
+					{
+						<button class="btn btn-success">
+							<a href="#" disabled>Chờ sử dụng </a>
+						</button>
 					}
 					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
-								<form asp-action="HuyDatPhong" asp-controller="AdminDatPhong" asp-area="Admin" class="p-5">
+								<form asp-action="HuyDatPhong" asp-controller="HuyDatPhong" asp-area="" class="p-5">
 									<h4>Lí do Hủy đặt phòng: </h4>
 									<div class="input-group flex-nowrap">
 										<input type="hidden" name="id" value="@item.IdDatPhong" />
@@ -149,6 +139,7 @@
 			</div>
 			</td> *@
 				@* <td><a asp-action="HuyDatPhong" asp-controller="HuyDatPhong" asp-route-id="@item.IdDatPhong" confirm("are you sre")>@(item.TTDatPhong == TrangThaiDP.KHACH_HUY || item.TTDatPhong == TrangThaiDP.ADMIN_HUY ? "Đã hủy" : "Hủy đơn đặt")</a></td> *@
+			
 			</tr>
 
 			counter++;
@@ -158,3 +149,5 @@
 
 	</tbody>
 </table>
+@* 
+@(item.IdDatPhong) *@

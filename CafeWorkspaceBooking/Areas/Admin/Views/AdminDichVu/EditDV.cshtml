@@ -1,0 +1,176 @@
+﻿@model CafeWorkspaceBooking.Areas.Admin.ViewModels.AdminDichVuVM;
+<style>
+	.f-childDetail {
+		border: double 3px rgb(231, 231, 231);
+	}
+
+	.avt1 {
+		transition: transform 0.5s ease;
+	}
+	.avt1:hover {
+		box-shadow: 0px 0px 30px 1px rgba(10, 232, 198, 0.3);
+		transform: rotate(6deg);
+	}
+	.bg-custom {
+		background-image: url('/img/bg-01.png');
+		background-size: cover;
+		height: 100%; /* Đảm bảo container chiếm toàn bộ chiều cao của màn hình */
+		width: 100%;
+	}
+
+	.bg-custom-img {
+		background-image: url('/img/bg-01-img.png');
+		background-size: cover;
+		height: 100%; /* Đảm bảo container chiếm toàn bộ chiều cao của màn hình */
+	}
+</style>
+<div class="container-fluit bg-custom py-0">
+	<div class="row py-0 rounded custom-shadow px-5 pt-2 mx-5">
+		<div class="col mx-auto rounded-2 p-5  d-flex flex-column">
+			<div class="row p-0 fw-bold fs-2 text-center"><span>Cập nhật Sản Phẫm</span></div>
+			<form asp-action="EditDV" method="post" enctype="multipart/form-data">
+				<div class="row p-2 w-100 my-1">
+					<div class="col-2 px-0 fs-3 pt-2 "> Chọn danh mục: </div>
+					<div class="col-4 px-0 ">
+						<select asp-for="@Model.IdDmDichVu" class="form-select form-select-sm fs-4" aria-label=".form-select-sm example" style="height: 30px;">
+							<option value="">-- Chọn danh mục --</option>
+
+							@foreach (var item in (List<CafeWorkspaceBooking.Models.AppDmDichVu>)ViewBag.dmDV)
+							{
+								if (item.IdDmDichVu == Model.IdDmDichVu)
+								{
+									<option value="@item.IdDmDichVu" selected>@item.TenDmDv</option>
+								}
+								else
+								{
+									<option value="@item.IdDmDichVu">@item.TenDmDv</option>
+								}
+							}
+						</select>
+
+
+					</div>
+
+
+
+				</div>
+				<div class="row p-2 me-2 w-100 my-1">
+					<div class="col-2 fs-3 p-0">
+						Tên Sản phẩm:
+					</div>
+					<div class="col-4 p-0 ">
+						<input asp-for="@Model.TenDv" type="text" class="form-control rounded-2" />
+					</div>
+
+				</div>
+				<div class="row p-2 me-2 w-100 my-1">
+					<div class="col-2 fs-3 p-0">
+						Giá:
+					</div>
+					<div class="col-4 p-0">
+						<input asp-for="@Model.Gia" type="text" class="form-control rounded-2" />
+					</div>
+
+				</div>
+				<div class="row p-2  w-100 ">
+					<div class="col-2 p-0">
+					</div>
+					<div class="col-5 p-0 me-auto">
+						<div class="row ms-auto">
+							<div class="col-3  p-0 pt-1  fs-3 me-3">
+								Ảnh bìa:
+							</div>
+							<div class="col-9  p-4">
+
+								<div class="row">
+									<div class="col-5 bg-custom-img p-4">
+										<div class="avt1 text-center">
+											<img src="@Model.ImageUrl" width="120px" class="rounded-2" />
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="row p-0 ">
+							<div class="custom-file  p-0">
+								<input asp-for="@Model.ImageUrlFormFile" type="file" class="custom-file-input ms-5" id="customFile1" onchange="updateFileName(this, 'fileLabel1')" style="width: 80px; overflow: hidden;" multiple>
+								<span class="custom-file-label mt-2 fs-5" id="fileLabel1" style="width: auto; white-space: nowrap; display: block"></span>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-5 ms-auto">
+						<div class="row ms-auto">
+							<div class="col-3  p-0 pt-1  fs-3 me-3">
+								Ảnh Phụ:
+							</div>
+							<div class="col-9  p-4">
+
+								<div class="row">
+									@foreach (var item in Model.appImgDV)
+									{
+										<div class="col-4 bg-custom-img p-4">
+											<div class="avt1  text-center">
+												<img src="@item" width="120px" class="rounded-2" />
+											</div>
+										</div>
+									}
+								</div>
+
+							</div>
+
+						</div>
+						<div class="row p-0 ">
+							<div class="custom-file ">
+								<input asp-for="@Model.appImgDVFormFile" type="file" class="custom-file-input ms-5" id="customFile2" onchange="updateFileName(this, 'fileLabel2')" style="width: 80px; overflow: hidden;" multiple>
+								<span class="custom-file-label mt-2 fs-5" id="fileLabel2" style="width: auto; white-space: nowrap; display: block"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row p-2 my-4">
+					<div class="row p-0 ms-1">
+						<div class="col-auto w-100 p-0 pt-1 fs-3 me-2">
+							Thành phần:
+						</div>
+						<div class="col-auto w-100 p-0">
+							<textarea asp-for="@Model.ThanhPhan" id="editor_atb_thanhphanOfdichvu" style="min-width: 200px"></textarea>
+						</div>
+					</div>
+					<div class="row mt-4 p-0 ms-1">
+						<div class="col-auto w-100 p-0 pt-1 fs-3 me-2">
+							Mô tả:
+						</div>
+						<div class="col-auto w-100 p-0">
+							<textarea asp-for="@Model.Mota" id="editor_atb_motaOfdichvu" style="min-width: 200px"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-auto ms-auto">
+						<button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="width: 100px">
+							<a asp-action="Index" asp-controller="AdminDichVu" class="text-decoration-none  text-light"> Hủy</a>
+						</button>
+						<button type="submit" class="btn btn-success ms-3" style="width: 100px"> Cập nhật</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</div>
+<script>
+	function updateFileName(input, labelId) {
+		var fileLabel = document.getElementById(labelId);
+
+		if (input.files.length > 0) {
+			var fileCount = input.files.length;
+			fileLabel.innerHTML = '<i class="fas fa-check-circle" style="color: #198754"></i>' + " Đã Chọn " + fileCount + " tệp";
+		} else {
+			fileLabel.innerHTML = " Chọn tệp";
+		}
+	}
+</script>

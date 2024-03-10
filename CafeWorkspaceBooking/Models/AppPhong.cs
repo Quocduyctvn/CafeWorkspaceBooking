@@ -18,12 +18,10 @@ namespace CafeWorkspaceBooking.Models
 
 		public ICollection<AppImgPhong> appImgPhongs { get; set; }  // 1 phòng có nhìu ảnh
 
-        public ICollection<AppDVPhong> appDVPhongs { get; set; }   // 1 phòng có nhìu DICH VU PHONG 
-
 		public ICollection<AppDatPhong> appDatPhongs { get; set; }   // 1 phòng có nhìu DatPhong
 
 		public ICollection<AppDanhGia> appDanhGias { get; set; }   // 1 phòng có nhìu DanhGia 
 
-
+        public ICollection<AppThongBao>? appThongBao { get; set; }
     }
 }

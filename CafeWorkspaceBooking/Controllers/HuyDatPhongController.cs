@@ -2,6 +2,7 @@
 using CafeWorkspaceBooking.Models;
 using CafeWorkspaceBooking.WebConfig.Contants;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace CafeWorkspaceBooking.Controllers
@@ -31,7 +32,9 @@ namespace CafeWorkspaceBooking.Controllers
 
 
 			// cập nhật trạng thái phòng tại thời điểm đó là huy
-			var datphong = _CafeDbContext.appDatPhongs.Find(id);
+			var datphong = _CafeDbContext.appDatPhongs
+						.Include(i => i.appKhachHang)
+						.FirstOrDefault(i => i.IdDatPhong == id);
 			datphong.TTDatPhong = TrangThaiDP.KHACH_HUY;
 
 
@@ -43,12 +46,41 @@ namespace CafeWorkspaceBooking.Controllers
 				IdDatPhong = id,
 				IdKhachHang = userId
 			};
-			_CafeDbContext.AppHuyDatPhongs.Add(huyDP);
+			
 
 
-			_CafeDbContext.appDatPhongs.Update(datphong);
-			_CafeDbContext.SaveChanges();
-			SetSuccessMesg("Hủy Đặt phòng thành công - hẹn gặp lại quý khách");
+			_CafeDbContext.appDatPhongs.Update(datphong);               // update trạng thái đặt phòng 
+			_CafeDbContext.AppHuyDatPhongs.Add(huyDP);                      // Thêm record Hủy đặt phòng
+			int success = _CafeDbContext.SaveChanges();					// giá trị trả về của _CafeDbContext.SaveChanges();	 là sl record đc lưu 
+            if (success > 0)
+			{
+				var TTHDP = _CafeDbContext.AppHuyDatPhongs									
+									.Where(i => i.TGHuy == huyDP.TGHuy && i.IdDatPhong == huyDP.IdDatPhong)
+									.FirstOrDefault();
+				var Tbao = new AppThongBao();							// lưu bảng thông báo
+				Tbao.TenThongBao = "Hủy đặt phòng";
+				Tbao.NDThongbao = $"Khách hàng {huyDP.appKhachHang.HoTen} đã hủy đặt phòng vào lúc {huyDP.appDatPhong.TGBatDau}";
+				Tbao.CreateAt = DateTime.Now;
+				Tbao.Checked = false;
+				Tbao.CheckAll = false;
+
+				Tbao.IdDanhGia = null;
+				Tbao.IdDatPhong = huyDP.IdDatPhong;
+				Tbao.IdHuyDatPhong = TTHDP.IdHuyDatPhong;
+				Tbao.IdKhachHang = userId;
+				Tbao.IdPhong = huyDP.appDatPhong.IdPhong;
+				
+
+				_CafeDbContext.Add(Tbao);
+				_CafeDbContext.SaveChanges();
+
+                SetSuccessMesg("Hủy Đặt phòng thành công - hẹn gặp lại quý khách");
+            }
+			else
+			{
+
+                SetErrorMesg("Hủy Đặt phòng KHÔNg thành công");
+            }
 			return RedirectToAction("DetailOfBooking", "DatPhong");
 		}
 	}

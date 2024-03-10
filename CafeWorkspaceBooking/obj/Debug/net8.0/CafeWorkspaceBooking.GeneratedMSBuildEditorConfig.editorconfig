@@ -26,8 +26,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminDatPhong/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5EYXRQaG9uZ1xDaGVja091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminDatPhong/ChiTietDP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5EYXRQaG9uZ1xDaGlUaWV0RFAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminDatPhong/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5EYXRQaG9uZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminDichVu/DetailDV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5EaWNoVnVcRGV0YWlsRFYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminDichVu/EditDV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5EaWNoVnVcRWRpdERWLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminDichVu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5EaWNoVnVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Areas/Admin/Views/AdminHome/Index.cshtml]
@@ -80,6 +100,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/DatPhong/DetailOfBooking.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0UGhvbmdcRGV0YWlsT2ZCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/LAPTRINH/DotNet/dotNet_aTin/HonSon/CafeWorkspaceBooking/CafeWorkspaceBooking/Views/Home/Detail.cshtml]

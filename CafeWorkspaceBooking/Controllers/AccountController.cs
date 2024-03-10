@@ -88,7 +88,7 @@ namespace CafeWorkspaceBooking.Controllers
 			if (user.SDT != "12345678910")
 			{
 				_kh = await _CafeDbContext.AppKhachHangs.FirstOrDefaultAsync(u => u.SDT == user.SDT);
-				// nếu tồn tại thì kiểm tra tài khoản đó có bị khóa hay không 
+				// nếu tồn tại thì kiểm tra tài khoản đó có bị khóa hay không
 				if (!_kh.TrangThaiTK)
 				{
 					SetErrorMesg("Tài khoản cuả bạn bị khóa - Vui lòng liên hệ quán Lolita Coffee");

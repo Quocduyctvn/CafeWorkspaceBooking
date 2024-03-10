@@ -271,3 +271,5 @@ D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking\
 D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
 D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking\bin\Debug\net8.0\Microsoft.JSInterop.dll
 D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking\bin\Debug\net8.0\libman.json
+D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking\bin\Debug\net8.0\BraintreeHttp-Dotnet.dll
+D:\LAPTRINH\DotNet\dotNet_aTin\HonSon\CafeWorkspaceBooking\CafeWorkspaceBooking\bin\Debug\net8.0\Source.dll

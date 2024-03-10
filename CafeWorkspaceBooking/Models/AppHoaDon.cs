@@ -17,6 +17,8 @@ namespace CafeWorkspaceBooking.Models
         public AppNhanVien appNhanVien { get; set; }
         public AppKhachHang? appkhachHang  { get; set; }
 
+        public int? IdDatDV {  get; set; }
+        public AppDatDV appDatDV { get; set; }
 
     }
 }
