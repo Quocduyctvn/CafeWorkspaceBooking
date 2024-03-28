@@ -135,21 +135,6 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
 				}
 
 
-
-
-				if (dp.TGKetThuc < DateTime.Now && dp.TTDatPhong == TrangThaiDP.DADUYET)   // đã duyệt nhưng không checkIN
-				{                                                                          // => Hủy đọnew đặt hàng & gửi mial đèn bù
-					var AdminDatPhongController = new AdminDatPhongController(_CafeDbContext, _mapper);
-
-					ClaimsIdentity identity = (ClaimsIdentity)User.Identity;  // lấy thông từ Claims xuống
-					Claim userIdClaim = identity.FindFirst("UserId");
-					int Idadmin = int.Parse(userIdClaim?.Value);
-					// Nếu có giá trị, thực hiện hủy đặt phòng và gửi email  Idadmin
-					AdminDatPhongController.HuyDatPhong(dp.IdDatPhong, "Quá hạn nhận phòng", Idadmin);
-
-				}
-
-
 				_CafeDbContext.Update(dp);
 				_CafeDbContext.SaveChanges();
 
@@ -204,10 +189,6 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
 					.Include(i => i.appKhachHang)
 					.Where(i => i.IdDatPhong != item.IdDatPhong)
 					.Any(otherCustomer =>
-						(otherCustomer.appPhong.IdPhong == item.appPhong.IdPhong) &&
-						(otherCustomer.TGBatDau.Day == item.TGBatDau.Day) &&
-						(otherCustomer.TGBatDau.Month == item.TGBatDau.Month) &&
-						(otherCustomer.TGBatDau.Year == item.TGBatDau.Year) &&
 						((item.TGBatDau.TimeOfDay > otherCustomer.TGBatDau.TimeOfDay && item.TGBatDau.TimeOfDay < otherCustomer.TGKetThuc.TimeOfDay) ||
 						(item.TGKetThuc.TimeOfDay > otherCustomer.TGBatDau.TimeOfDay && item.TGKetThuc.TimeOfDay < otherCustomer.TGKetThuc.TimeOfDay) ||
 						(item.TGBatDau.TimeOfDay == otherCustomer.TGBatDau.TimeOfDay && item.TGKetThuc.TimeOfDay == otherCustomer.TGKetThuc.TimeOfDay))
@@ -216,20 +197,6 @@ namespace CafeWorkspaceBooking.Areas.Admin.Controllers
 				{
 					DP.TrangThaiPhong = TrangThaiPhong.TRUNG;
 				}
-
-				if (item.TTDatPhong == TrangThaiDP.DADUYET)                                     // chờ  sử dụng
-				{
-					DP.TrangThaiPhong = TrangThaiPhong.DADAT;
-				}
-				if (item.TTDatPhong == TrangThaiDP.CHECKIN)                                     // đang sử dụng
-				{
-					DP.TrangThaiPhong = TrangThaiPhong.DANG_SUDUNG;
-				}
-				if (item.TTDatPhong == TrangThaiDP.CHECKOUT)                                    // đã sử dụng
-				{
-					DP.TrangThaiPhong = TrangThaiPhong.DA_SUDUNG;
-				}
-
 				datphong.Add(DP);
 			}
 			var p = _CafeDbContext.AppPhongs

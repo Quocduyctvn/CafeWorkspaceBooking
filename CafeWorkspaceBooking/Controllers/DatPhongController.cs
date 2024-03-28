@@ -143,14 +143,6 @@ namespace CafeWorkspaceBooking.Controllers
 				datetime = null;
 			}
 			var user = HttpContext.User;
-			if (!user.Identity.IsAuthenticated) // check đã đăng nhập hay ch
-			{
-				SetErrorMesg("Vui lòng Đăng nhập để xem đơn Đặt phòng");
-				return RedirectToAction("Login", "Account");
-			}
-			ClaimsIdentity identity = (ClaimsIdentity)User.Identity;  // lấy thông từ Claims xuống
-			Claim userIdClaim = identity.FindFirst("UserId");
-			int userId = int.Parse(userIdClaim?.Value);
 			var _kh = _CafeDbContext.AppKhachHangs.Find(userId);
 
 			if (_kh == null)
@@ -193,8 +185,6 @@ namespace CafeWorkspaceBooking.Controllers
 				DP.IdDatPhong = item.IdDatPhong;
 				DP.TenKhachHang = item.appKhachHang.HoTen;
 				DP.TenPhong = item.appPhong.TenPhong;
-				DP.TGBatDau = item.TGBatDau;
-				DP.TGKetThuc = item.TGKetThuc;
 				DP.TrangThaiDP = item.TTDatPhong;
 				///DP.TrangThaiPhong = ;
 				var check_Trung = _CafeDbContext.appDatPhongs
@@ -209,19 +199,6 @@ namespace CafeWorkspaceBooking.Controllers
 				if (check_Trung)
 				{
 					DP.TrangThaiPhong = TrangThaiPhong.TRUNG;
-				}
-
-				if (item.TTDatPhong == TrangThaiDP.DADUYET)                                     // chờ  sử dụng 
-				{
-					DP.TrangThaiPhong = TrangThaiPhong.DADAT;
-				}
-				if (item.TTDatPhong == TrangThaiDP.CHECKIN)                                     // đang sử dụng 
-				{
-					DP.TrangThaiPhong = TrangThaiPhong.DANG_SUDUNG;
-				}
-				if (item.TTDatPhong == TrangThaiDP.CHECKOUT)                                     // đã sử dụng 
-				{
-					DP.TrangThaiPhong = TrangThaiPhong.DA_SUDUNG;
 				}
 				datphong.Add(DP);
 			}
